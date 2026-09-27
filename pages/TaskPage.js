@@ -17,6 +17,9 @@ export class TaskPage extends BasePage
         this.completion = page.locator("#completion");
 
         this.saveButton = page.getByRole('button', {name : 'Save'});
+        
+        this.deleteButton = page.locator("//button[@aria-label='Delete']");
+    
     }
 
     async clickOnTaskLink()
@@ -48,6 +51,12 @@ export class TaskPage extends BasePage
     {
         await super.click(this.saveButton);
     }
+
+    async clickOnDeletButton()
+    {
+        await super.click(this.deleteButton);
+    }
+
 
 
 }
