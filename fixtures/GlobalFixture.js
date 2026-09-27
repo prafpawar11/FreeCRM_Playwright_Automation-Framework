@@ -1,6 +1,7 @@
 import {test, expect} from '@playwright/test';
 import { ContactPage } from '../pages/ContactPage.js';
 import { DealsPage } from '../pages/DealsPage.js';
+import { TaskPage } from '../pages/TaskPage.js';
 
 const customTest = test.extend({
 
@@ -14,6 +15,10 @@ const customTest = test.extend({
     dealsPage : async ({page},use) =>{
 
         await use(new DealsPage(page));
+    },
+    
+    taskPage : async ({ page }, use ) =>{
+        await use (new TaskPage(page));
     }
 
 });

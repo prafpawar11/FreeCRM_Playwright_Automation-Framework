@@ -1,0 +1,3 @@
+2026-09-27 12:02:18 [info]: Clicking on locator('//nav[@class=\'_nav_3as89_1\']/descendant::a[@href=\'/tasks\']')
+2026-09-27 12:02:20 [info]: Clicking on getByRole('button', { name: 'Create' })
+2026-09-27 12:02:21 [info]: Entering undefined text in locator('#title')
