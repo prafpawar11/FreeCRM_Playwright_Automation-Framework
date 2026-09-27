@@ -1,0 +1,1722 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: ContactPageTest.spec.js >> Verify Used is on Contact Page
+- Location: tests\ContactPageTest.spec.js:7:5
+
+# Error details
+
+```
+Error: expect(page).toHaveURL(expected) failed
+
+Expected: "https://ui.freecrm.com/contacts"
+Received: "https://ui.freecrm.com/"
+Timeout:  5000ms
+
+Call log:
+  - Expect "toHaveURL" with timeout 5000ms
+    - locator resolved to <html dir="ltr" lang="en-GB" data-theme="default" data-dark-mode="false">…</html>
+    - unexpected value "https://ui.freecrm.com/"
+
+```
+
+```yaml
+- navigation "Main navigation":
+  - img "FreeCRM"
+  - text: FreeCRM
+  - button "Collapse navigation":
+    - img
+  - list:
+    - listitem:
+      - link "Home":
+        - /url: /
+        - img
+        - text: Home
+    - listitem:
+      - link "Contacts":
+        - /url: /contacts
+        - img
+        - text: Contacts
+    - listitem:
+      - link "Companies":
+        - /url: /companies
+        - img
+        - text: Companies
+    - listitem:
+      - link "Calendar":
+        - /url: /calendar
+        - img
+        - text: Calendar
+    - listitem:
+      - link "Deals":
+        - /url: /deals
+        - img
+        - text: Deals
+    - listitem:
+      - link "Tasks":
+        - /url: /tasks
+        - img
+        - text: Tasks
+    - listitem:
+      - link "Cases":
+        - /url: /cases
+        - img
+        - text: Cases
+    - listitem:
+      - link "Calls":
+        - /url: /calls
+        - img
+        - text: Calls
+    - listitem:
+      - link "Email":
+        - /url: /email
+        - img
+        - text: Email
+    - listitem:
+      - link "Documents":
+        - /url: /documents
+        - img
+        - text: Documents
+    - listitem:
+      - link "Campaigns":
+        - /url: /campaigns
+        - img
+        - text: Campaigns
+    - listitem:
+      - link "Forms":
+        - /url: /forms
+        - img
+        - text: Forms
+    - listitem:
+      - link "Reports":
+        - /url: /reports
+        - img
+        - text: Reports
+    - listitem:
+      - link "Products":
+        - /url: /products
+        - img
+        - text: Products
+    - listitem:
+      - link "Invoices":
+        - /url: /invoices
+        - img
+        - text: Invoices
+  - link "Settings":
+    - /url: /settings
+    - img
+    - text: Settings
+- banner:
+  - strong: Soft Tech enterprises
+  - 'button "Balance: $0.00"'
+  - link "Free account":
+    - /url: /settings/billing/plan
+    - img
+    - text: Free account
+  - search:
+    - img
+    - searchbox "Search"
+  - button "Pinned Records":
+    - img
+  - button "Last accessed":
+    - img
+  - button "Rubbish Bin":
+    - img
+  - button "Contact support":
+    - img
+  - button "User menu": PP
+- heading "Good afternoon, Praful" [level=1]
+- paragraph: Saturday 26 September
+- link "6,933 Contacts":
+  - /url: /contacts
+  - img
+  - text: 6,933 Contacts
+- link "1,862 Companies":
+  - /url: /companies
+  - img
+  - text: 1,862 Companies
+- link "789 Deals":
+  - /url: /deals
+  - img
+  - text: 789 Deals
+- link "90 Tasks":
+  - /url: /tasks
+  - img
+  - text: 90 Tasks
+- link "15 Cases":
+  - /url: /cases
+  - img
+  - text: 15 Cases
+- button "Drag to reorder":
+  - img
+- text: System messages
+- button "Reload card":
+  - img
+- button "Remove card":
+  - img
+- text: Release Notes - September 24th
+- link "24/09/2026, 14:23":
+  - /url: /calendar/day/2026-09-24
+- link "Week view":
+  - /url: /calendar/week/2026-09-24
+  - img
+- link "Month view":
+  - /url: /calendar/month/2026-09-24
+  - img
+- list:
+  - listitem: The email compose will now allow using tags even on single ad-hoc mail outs. That is when clicking an email address or selecting multiple contacts and then "Send Email" from the action menu.
+  - listitem:
+    - text: You can now include
+    - code: unsubscribe block
+    - text: in single emails which will generate a link allowing the contact to mark themselves as to "do not email".
+  - listitem: The email composer will alert you if you are attempting to email someone marked as "do not email".
+  - listitem: We fixed an issue with the calendar not respecting the selection of which record types to show.
+- text: Release Notes - September 13th
+- link "13/09/2026, 21:33":
+  - /url: /calendar/day/2026-09-13
+- link "Week view":
+  - /url: /calendar/week/2026-09-13
+  - img
+- link "Month view":
+  - /url: /calendar/month/2026-09-13
+  - img
+- paragraph:
+  - text: When you tick the "select all" checkbox at the top of each grid, you can now select to affect your actions on
+  - strong: all
+  - text: your records.
+- text: Release Notes - September 12th
+- link "12/09/2026, 04:47":
+  - /url: /calendar/day/2026-09-12
+- link "Week view":
+  - /url: /calendar/week/2026-09-12
+  - img
+- link "Month view":
+  - /url: /calendar/month/2026-09-12
+  - img
+- list:
+  - listitem:
+    - text: "We've added a new field to all record types:"
+    - emphasis: Record Age
+    - text: . This is an automatic field that shows the age of the record in days. You can use that field in filters, use those filters in campaigns to target contacts after they exist for a number of days, or even use it in automation workflows (Paid accounts only). You'll find the field in the column selector under Filters, if you want to show it in your grids, or in any filter construction.
+  - listitem:
+    - text: Campaign schedules will now warn you if you attempt to schedule a content template that is missing the unsubscribe block (which you can add by pressing
+    - emphasis: "#"
+    - text: when in the template editor, and selecting
+    - emphasis: Unsubscribe
+    - text: from the tag selector.
+- text: Release Notes - September 10th
+- link "11/09/2026, 05:39":
+  - /url: /calendar/day/2026-09-11
+- link "Week view":
+  - /url: /calendar/week/2026-09-11
+  - img
+- link "Month view":
+  - /url: /calendar/month/2026-09-11
+  - img
+- list:
+  - listitem:
+    - text: We've added "Actual Close Date" field to deals, coupled with a dedicated close button on the toolbar (or you can tick the
+    - code: Closed
+    - text: checkbox as before). This actual date will be used for sales targets and reports.
+  - listitem: Resolved an issue that prevented deals, cases and tasks from showing on the calendar even when date fields had the "Show in Calendar" ticked.
+  - listitem: Fixed the date on notes - now showing the years for older notes from previous years.
+  - listitem: Small fixes throughout (better validation notices when missing required fields, fixed some display issues)
+- text: Release Notes - September 7th
+- link "07/09/2026, 14:22":
+  - /url: /calendar/day/2026-09-07
+- link "Week view":
+  - /url: /calendar/week/2026-09-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2026-09-07
+  - img
+- paragraph:
+  - emphasis: "Tip:"
+  - strong: A single click on a grid row opens the quick view drawer. A double click takes you directly to the full record view page
+- list:
+  - listitem: You can now select multiple contact or companies and email or SMS them all at once, using the action drop down. The actions show once records are ticked in the grid.
+  - listitem: Tasks will now hide completed tasks by default. You'll find a button in the Tasks page to quickly show or hide them.
+  - listitem: The Support widget on the new UI now works.
+- text: Release Notes - September 1st
+- link "01/09/2026, 16:00":
+  - /url: /calendar/day/2026-09-01
+- link "Week view":
+  - /url: /calendar/week/2026-09-01
+  - img
+- link "Month view":
+  - /url: /calendar/month/2026-09-01
+  - img
+- list:
+  - listitem:
+    - text: We've enabled our
+    - strong: Quickbooks
+    - text: integration. If you are a user of Quickbooks you can now connect it to your FreeCRM account (Pro only).
+  - listitem: You can now determine that an unanswered incoming call will be routed to another phone number, or that calls within a certain time are directly routed to another phone (or to voicemail).
+- text: Release Notes - August 31st
+- link "01/09/2026, 06:01":
+  - /url: /calendar/day/2026-09-01
+- link "Week view":
+  - /url: /calendar/week/2026-09-01
+  - img
+- link "Month view":
+  - /url: /calendar/month/2026-09-01
+  - img
+- paragraph:
+  - text: We've made our
+  - strong: new
+  - text: user interface the default one for FreeCRM! We hope you like it. Please report any issues you encounter to us via the support link at the top right.
+- paragraph:
+  - text: If you feel that you must go back to the old you, you can do it via the profile menu (top right menu) - Select the
+  - emphasis: Back to the Old UI
+  - text: option. Keep in mind the old UI will not be receiving any more updates and although we'll keep it going for now, it will fall behind very quickly.
+- text: Release Notes - August 28th
+- link "29/08/2026, 04:18":
+  - /url: /calendar/day/2026-08-29
+- link "Week view":
+  - /url: /calendar/week/2026-08-29
+  - img
+- link "Month view":
+  - /url: /calendar/month/2026-08-29
+  - img
+- paragraph:
+  - text: The following are now available on the
+  - strong: new
+  - text: user interface.
+- list:
+  - listitem:
+    - strong: Video Conferencing
+    - text: "- Pro accounts can now create configure the video conferencing system they use and have it auto create meeting links when prospects schedule a meeting with them using their public scheduling pages. We currently support Google Meet, Zoom, Microsoft Teams and Zoho Meetings."
+  - listitem:
+    - text: When creating content templates you can now press
+    - code: "#"
+    - text: and select to insert an unsubscribe block or include a link to one of your public scheduling calendars.
+  - listitem: If you are using the AI component, you can now have it suggest a call script when creating a call to a contact.
+  - listitem: You can now see latest form submissions on the home page.
+- text: Release Notes - August 25th
+- link "25/08/2026, 21:56":
+  - /url: /calendar/day/2026-08-25
+- link "Week view":
+  - /url: /calendar/week/2026-08-25
+  - img
+- link "Month view":
+  - /url: /calendar/month/2026-08-25
+  - img
+- paragraph: Over the last few weeks we've silently released and updated our new user interface and added new features. We have resolved many issues that came up in testing and are happy to report we're very close to making this new interface the default one. You will still have access to the old interface once we make the switch but it will no longer receive any updates.
+- list:
+  - listitem:
+    - strong: Public Scheduling
+    - text: "- Pro accounts can now create public scheduling links where anyone can schedule a meeting or block time in your calendar, while maintaining a full sync with the CRM data. See the"
+    - strong: Scheduling
+    - text: section under Settings.
+  - listitem: Microsoft 365 Calendar Sync is now available along side Google. You can find the configuration for it under Settings as well.
+  - listitem: We added file field to forms where you can have documents sent to you when a form is filled, automatically associated to the contact and even tagged if required.
+  - listitem: Campaign templates can now define dynamic attachments - a file can be sent individually to members of a campaign based on tagged documents associated with them. We will create a use case report for this soon to show how this can be useful to generate email campaigns with individual file attachments.
+- text: Release Notes - July 15th
+- link "15/07/2026, 00:11":
+  - /url: /calendar/day/2026-07-15
+- link "Week view":
+  - /url: /calendar/week/2026-07-15
+  - img
+- link "Month view":
+  - /url: /calendar/month/2026-07-15
+  - img
+- paragraph: This is our biggest release in a long time! We've also completed our infrastructure upgrade which will help us maintain a better quality service in the long term.
+- paragraph:
+  - text: First, we have a new user interface in beta. You can access it now at
+  - link "https://new.freecrm.com":
+    - /url: https://new.freecrm.com
+  - text: . Your same login applies.
+- list:
+  - listitem: You can now send MMS messages if you are signed up for telephony and SMS.
+  - listitem: You can now integrate your AI Provider API key to open up AI assistance within the CRM. It can help you draft emails, messages and offer suggested next steps for Contacts.
+- paragraph: "In the new user interface you will also find:"
+- list:
+  - listitem: Automation - automate your processes and workflows! See under Settings for the new configuration.
+- text: Release Notes - May 18th
+- link "20/05/2026, 23:38":
+  - /url: /calendar/day/2026-05-20
+- link "Week view":
+  - /url: /calendar/week/2026-05-20
+  - img
+- link "Month view":
+  - /url: /calendar/month/2026-05-20
+  - img
+- list:
+  - listitem: You can now save your searches and view as private. They will not be shared with other users in your account.
+  - listitem: Major overhaul of Google calendar sync to improve the immediacy of syncing events to and from the CRM and Google Calendar.
+- text: Release Notes - April 28th
+- link "28/04/2026, 17:50":
+  - /url: /calendar/day/2026-04-28
+- link "Week view":
+  - /url: /calendar/week/2026-04-28
+  - img
+- link "Month view":
+  - /url: /calendar/month/2026-04-28
+  - img
+- list:
+  - listitem: We upgraded our infrastructure to make releasing updates more seamless in future.
+  - listitem: Resolved an issue with 3+way calling
+- text: Release Notes - Feb 12th
+- link "12/02/2026, 17:16":
+  - /url: /calendar/day/2026-02-12
+- link "Week view":
+  - /url: /calendar/week/2026-02-12
+  - img
+- link "Month view":
+  - /url: /calendar/month/2026-02-12
+  - img
+- list:
+  - listitem: You can now format number fields as "money" with added currency. If a value in the field cannot be formatted as money it will be shows as-is.
+- text: Release Notes
+- link "27/01/2026, 16:44":
+  - /url: /calendar/day/2026-01-27
+- link "Week view":
+  - /url: /calendar/week/2026-01-27
+  - img
+- link "Month view":
+  - /url: /calendar/month/2026-01-27
+  - img
+- heading "Release Notes - Jan 27th" [level=3]
+- list:
+  - listitem: We added the Data Exporter security role. To keep existing functionality all users are assigned this role, but as an admin you can remove that role from users in your account to prevent them from exporting data.
+- button "Drag to reorder":
+  - img
+- text: Activity stream
+- button "Reload card":
+  - img
+- button "Remove card":
+  - img
+- text: Contacts
+- button "Change model type":
+  - img
+- link "aish sghy":
+  - /url: /contacts/8f539b16-4407-42d7-b90c-5de086cb27ec
+- link "29/11/2025, 16:27":
+  - /url: /calendar/day/2025-11-29
+- link "Week view":
+  - /url: /calendar/week/2025-11-29
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-11-29
+  - img
+- text: Updated
+- link "kanchan dar":
+  - /url: /contacts/5e75cebe-7468-4052-b64b-982aa480853e
+- link "29/11/2025, 16:49":
+  - /url: /calendar/day/2025-11-29
+- link "Week view":
+  - /url: /calendar/week/2025-11-29
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-11-29
+  - img
+- text: Updated
+- link "kartiki pande":
+  - /url: /contacts/2aded32e-363e-43c0-a718-569c4991c3ac
+- link "29/11/2025, 16:49":
+  - /url: /calendar/day/2025-11-29
+- link "Week view":
+  - /url: /calendar/week/2025-11-29
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-11-29
+  - img
+- text: Updated
+- link "aish sghy":
+  - /url: /contacts/d36ac7b0-497a-464c-a2b8-f1d5f1496948
+- link "29/11/2025, 16:49":
+  - /url: /calendar/day/2025-11-29
+- link "Week view":
+  - /url: /calendar/week/2025-11-29
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-11-29
+  - img
+- text: Updated
+- link "Anjali Gurav":
+  - /url: /contacts/b33c15cb-aba6-45d4-bf4e-021e29d9ad07
+- link "08/12/2024, 00:30":
+  - /url: /calendar/day/2024-12-08
+- link "Week view":
+  - /url: /calendar/week/2024-12-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-08
+  - img
+- text: Updated
+- link "Anjali Gurav":
+  - /url: /contacts/e582d99c-d28f-4b0b-b4a2-011a800a3fc1
+- link "08/12/2024, 19:00":
+  - /url: /calendar/day/2024-12-08
+- link "Week view":
+  - /url: /calendar/week/2024-12-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-08
+  - img
+- text: Updated
+- link "Roohi patil":
+  - /url: /contacts/8a77ef36-b4c9-4212-b61f-7418ed199e6b
+- link "08/12/2024, 19:01":
+  - /url: /calendar/day/2024-12-08
+- link "Week view":
+  - /url: /calendar/week/2024-12-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-08
+  - img
+- text: Updated
+- link "Komal pujari":
+  - /url: /contacts/ac77e7cc-d61a-42cb-8f2f-24fe6fb51791
+- link "08/12/2024, 19:01":
+  - /url: /calendar/day/2024-12-08
+- link "Week view":
+  - /url: /calendar/week/2024-12-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-08
+  - img
+- text: Updated
+- link "suraj Patil":
+  - /url: /contacts/97c42e45-9a5a-46f8-a756-caa2c3a333df
+- link "08/12/2024, 19:01":
+  - /url: /calendar/day/2024-12-08
+- link "Week view":
+  - /url: /calendar/week/2024-12-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-08
+  - img
+- text: Updated
+- link "saee jadhav":
+  - /url: /contacts/9b3771c0-8254-4b86-a8d6-43a53f69eb95
+- link "08/12/2024, 19:13":
+  - /url: /calendar/day/2024-12-08
+- link "Week view":
+  - /url: /calendar/week/2024-12-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-08
+  - img
+- text: Updated
+- link "swati more":
+  - /url: /contacts/481c6d51-7e1d-442e-a9e2-a857248eb78e
+- link "08/12/2024, 19:13":
+  - /url: /calendar/day/2024-12-08
+- link "Week view":
+  - /url: /calendar/week/2024-12-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-08
+  - img
+- text: Updated
+- link "saee jadhav":
+  - /url: /contacts/92925a93-5dd3-4b36-8eaa-c804a5cd8aaf
+- link "08/12/2024, 19:23":
+  - /url: /calendar/day/2024-12-08
+- link "Week view":
+  - /url: /calendar/week/2024-12-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-08
+  - img
+- text: Updated
+- link "saee jadhav":
+  - /url: /contacts/23235342-ca9d-4082-90ed-4b4e34be1fa9
+- link "08/12/2024, 19:27":
+  - /url: /calendar/day/2024-12-08
+- link "Week view":
+  - /url: /calendar/week/2024-12-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-08
+  - img
+- text: Updated
+- link "saee jadhav":
+  - /url: /contacts/37b4d1cd-039e-4d09-8307-c19ab83add76
+- link "08/12/2024, 19:31":
+  - /url: /calendar/day/2024-12-08
+- link "Week view":
+  - /url: /calendar/week/2024-12-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-08
+  - img
+- text: Updated
+- link "saee jadhav":
+  - /url: /contacts/3cbf056c-93d1-467e-974b-1411ba30e942
+- link "08/12/2024, 19:34":
+  - /url: /calendar/day/2024-12-08
+- link "Week view":
+  - /url: /calendar/week/2024-12-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-08
+  - img
+- text: Updated
+- link "saee jadhav":
+  - /url: /contacts/b2bfde15-ec9a-4a0b-9a4c-44ca7105c215
+- link "08/12/2024, 19:38":
+  - /url: /calendar/day/2024-12-08
+- link "Week view":
+  - /url: /calendar/week/2024-12-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-08
+  - img
+- text: Updated
+- link "saee jadhav":
+  - /url: /contacts/cc29f069-dedd-4cae-bd7b-c77cc396b9c1
+- link "08/12/2024, 19:42":
+  - /url: /calendar/day/2024-12-08
+- link "Week view":
+  - /url: /calendar/week/2024-12-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-08
+  - img
+- text: Updated
+- link "saee jadhav":
+  - /url: /contacts/346e92b4-6fcb-4fad-8cfc-8a385d484b37
+- link "08/12/2024, 19:44":
+  - /url: /calendar/day/2024-12-08
+- link "Week view":
+  - /url: /calendar/week/2024-12-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-08
+  - img
+- text: Updated
+- link "saee jadhav":
+  - /url: /contacts/c350d995-631e-442b-a77a-1f55e84e49e2
+- link "08/12/2024, 19:46":
+  - /url: /calendar/day/2024-12-08
+- link "Week view":
+  - /url: /calendar/week/2024-12-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-08
+  - img
+- text: Updated
+- link "saee jadhav":
+  - /url: /contacts/8df9f3f8-837b-4b64-8873-96ef79b89ccc
+- link "08/12/2024, 21:17":
+  - /url: /calendar/day/2024-12-08
+- link "Week view":
+  - /url: /calendar/week/2024-12-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-08
+  - img
+- text: Updated
+- link "swati patil":
+  - /url: /contacts/6a41ca09-33a8-4ef6-b6d0-7be69d34f429
+- link "08/12/2024, 21:17":
+  - /url: /calendar/day/2024-12-08
+- link "Week view":
+  - /url: /calendar/week/2024-12-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-08
+  - img
+- text: Updated
+- link "saee jadhav":
+  - /url: /contacts/6f847570-d8bc-49b7-b13e-a5f5954fb4f9
+- link "08/12/2024, 21:19":
+  - /url: /calendar/day/2024-12-08
+- link "Week view":
+  - /url: /calendar/week/2024-12-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-08
+  - img
+- text: Updated
+- link "swati patil":
+  - /url: /contacts/f55031c9-baed-4c15-aa93-28622190b299
+- link "08/12/2024, 21:19":
+  - /url: /calendar/day/2024-12-08
+- link "Week view":
+  - /url: /calendar/week/2024-12-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-08
+  - img
+- text: Updated
+- link "saee jadhav":
+  - /url: /contacts/3af2880c-8d37-4d14-a335-1079728c8bfc
+- link "08/12/2024, 21:25":
+  - /url: /calendar/day/2024-12-08
+- link "Week view":
+  - /url: /calendar/week/2024-12-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-08
+  - img
+- text: Updated
+- link "swati patil":
+  - /url: /contacts/3112706b-6c02-417e-a64f-fcfc7d663b67
+- link "08/12/2024, 21:25":
+  - /url: /calendar/day/2024-12-08
+- link "Week view":
+  - /url: /calendar/week/2024-12-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-08
+  - img
+- text: Updated
+- link "saee jadhav":
+  - /url: /contacts/efca6dd5-d0e3-403c-8915-86d392d879be
+- link "08/12/2024, 21:30":
+  - /url: /calendar/day/2024-12-08
+- link "Week view":
+  - /url: /calendar/week/2024-12-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-08
+  - img
+- text: Updated
+- link "Amruta Patil":
+  - /url: /contacts/a42e9d4a-dffe-458c-a435-4ab107b2e6e2
+- link "17/12/2024, 21:17":
+  - /url: /calendar/day/2024-12-17
+- link "Week view":
+  - /url: /calendar/week/2024-12-17
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-17
+  - img
+- text: Updated
+- link "Shweta abc Jadhav":
+  - /url: /contacts/89860c8a-4515-4209-843a-0ed704b6a036
+- link "26/12/2024, 13:11":
+  - /url: /calendar/day/2024-12-26
+- link "Week view":
+  - /url: /calendar/week/2024-12-26
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-26
+  - img
+- text: Updated
+- link "Snehal abc patil":
+  - /url: /contacts/0e7f4a39-f6b5-43be-8dde-a781b8d57090
+- link "26/12/2024, 13:11":
+  - /url: /calendar/day/2024-12-26
+- link "Week view":
+  - /url: /calendar/week/2024-12-26
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-26
+  - img
+- text: Updated
+- link "Akshay abc more":
+  - /url: /contacts/93176e8e-d098-42bd-aee0-92ef64d01893
+- link "26/12/2024, 13:11":
+  - /url: /calendar/day/2024-12-26
+- link "Week view":
+  - /url: /calendar/week/2024-12-26
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-26
+  - img
+- text: Updated
+- link "chetan abc patil":
+  - /url: /contacts/ec9129d8-8961-417c-9ff2-4bc21efa9eb5
+- link "26/12/2024, 13:11":
+  - /url: /calendar/day/2024-12-26
+- link "Week view":
+  - /url: /calendar/week/2024-12-26
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-26
+  - img
+- text: Updated
+- link "sanket abc jadhav":
+  - /url: /contacts/0ddf3006-efe3-4c60-87d4-98b14806294b
+- link "26/12/2024, 13:11":
+  - /url: /calendar/day/2024-12-26
+- link "Week view":
+  - /url: /calendar/week/2024-12-26
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-26
+  - img
+- text: Updated
+- link "abcd pqr":
+  - /url: /contacts/033c7026-c4ee-4653-9fd6-0baa7f4ede5f
+- link "27/12/2024, 11:50":
+  - /url: /calendar/day/2024-12-27
+- link "Week view":
+  - /url: /calendar/week/2024-12-27
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-27
+  - img
+- text: Updated
+- link "Rohit Naik":
+  - /url: /contacts/7e4d38be-4140-44bb-aa5b-dd0618945e57
+- link "25/12/2024, 17:33":
+  - /url: /calendar/day/2024-12-25
+- link "Week view":
+  - /url: /calendar/week/2024-12-25
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-25
+  - img
+- text: Updated
+- link "Shruti Kale":
+  - /url: /contacts/ddedef13-563f-48b1-80ef-a525196e7557
+- link "25/12/2024, 17:34":
+  - /url: /calendar/day/2024-12-25
+- link "Week view":
+  - /url: /calendar/week/2024-12-25
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-25
+  - img
+- text: Updated
+- link "Shweta abc Jadhav":
+  - /url: /contacts/60d7ec53-96a2-499f-b4bf-7466a2cc6a20
+- link "27/12/2024, 12:16":
+  - /url: /calendar/day/2024-12-27
+- link "Week view":
+  - /url: /calendar/week/2024-12-27
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-27
+  - img
+- text: Updated
+- link "Snehal abc patil":
+  - /url: /contacts/1f84ac29-7357-4ac0-a2a4-b028f01b0aaf
+- link "27/12/2024, 12:16":
+  - /url: /calendar/day/2024-12-27
+- link "Week view":
+  - /url: /calendar/week/2024-12-27
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-27
+  - img
+- text: Updated
+- link "Akshay abc more":
+  - /url: /contacts/e9148dea-b096-4849-a5cf-548103a824ba
+- link "27/12/2024, 12:17":
+  - /url: /calendar/day/2024-12-27
+- link "Week view":
+  - /url: /calendar/week/2024-12-27
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-27
+  - img
+- text: Updated
+- link "chetan abc patil":
+  - /url: /contacts/e7d5b8f5-ab9d-46d8-bce5-dec34b98b3c8
+- link "27/12/2024, 12:17":
+  - /url: /calendar/day/2024-12-27
+- link "Week view":
+  - /url: /calendar/week/2024-12-27
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-27
+  - img
+- text: Updated
+- link "sanket abc jadhav":
+  - /url: /contacts/472814ce-6136-4b89-91cc-20d97f4f8998
+- link "27/12/2024, 12:17":
+  - /url: /calendar/day/2024-12-27
+- link "Week view":
+  - /url: /calendar/week/2024-12-27
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-27
+  - img
+- text: Updated
+- link "Snehal abc patil":
+  - /url: /contacts/7241cd9a-3341-4028-bbec-d3124feba4b3
+- link "17/12/2024, 14:20":
+  - /url: /calendar/day/2024-12-17
+- link "Week view":
+  - /url: /calendar/week/2024-12-17
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-17
+  - img
+- text: Updated
+- link "Shweta abc Jadhav":
+  - /url: /contacts/689a5766-420f-4592-9dbd-6eeb5d031d6b
+- link "17/12/2024, 14:27":
+  - /url: /calendar/day/2024-12-17
+- link "Week view":
+  - /url: /calendar/week/2024-12-17
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-17
+  - img
+- text: Updated
+- link "Snehal abc patil":
+  - /url: /contacts/eec8674d-3ab8-4e2e-9705-d69f67b28876
+- link "17/12/2024, 14:28":
+  - /url: /calendar/day/2024-12-17
+- link "Week view":
+  - /url: /calendar/week/2024-12-17
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-17
+  - img
+- text: Updated
+- link "Akshay abc more":
+  - /url: /contacts/a4aade51-fbff-4a0b-a1fb-30ad95f120a6
+- link "17/12/2024, 14:28":
+  - /url: /calendar/day/2024-12-17
+- link "Week view":
+  - /url: /calendar/week/2024-12-17
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-17
+  - img
+- text: Updated
+- link "chetan abc patil":
+  - /url: /contacts/6ae8d17b-5566-47df-8585-80dbefcdc60d
+- link "17/12/2024, 14:28":
+  - /url: /calendar/day/2024-12-17
+- link "Week view":
+  - /url: /calendar/week/2024-12-17
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-17
+  - img
+- text: Updated
+- link "sanket abc jadhav":
+  - /url: /contacts/e8d48eac-0933-4857-93c2-147be3156106
+- link "17/12/2024, 14:29":
+  - /url: /calendar/day/2024-12-17
+- link "Week view":
+  - /url: /calendar/week/2024-12-17
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-17
+  - img
+- text: Updated
+- link "ssg dhgd hrh":
+  - /url: /contacts/3d4b062f-2ad3-49e3-a831-d3cdb9b2d72d
+- link "17/12/2024, 16:39":
+  - /url: /calendar/day/2024-12-17
+- link "Week view":
+  - /url: /calendar/week/2024-12-17
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-17
+  - img
+- text: Updated
+- link "Shweta abc Jadhav":
+  - /url: /contacts/212ce0f9-a432-46f9-845a-9ec0bb87ca5b
+- link "17/12/2024, 17:10":
+  - /url: /calendar/day/2024-12-17
+- link "Week view":
+  - /url: /calendar/week/2024-12-17
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-17
+  - img
+- text: Updated
+- link "Snehal abc patil":
+  - /url: /contacts/1d7c8e7a-4deb-4e92-afee-aa74d0a16f62
+- link "17/12/2024, 17:11":
+  - /url: /calendar/day/2024-12-17
+- link "Week view":
+  - /url: /calendar/week/2024-12-17
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-17
+  - img
+- text: Updated
+- link "Akshay abc more":
+  - /url: /contacts/6b24ff04-c8a5-43c9-bf8d-2797900ef8c7
+- link "17/12/2024, 17:11":
+  - /url: /calendar/day/2024-12-17
+- link "Week view":
+  - /url: /calendar/week/2024-12-17
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-17
+  - img
+- text: Updated
+- link "chetan abc patil":
+  - /url: /contacts/f0e89061-e7c2-471d-8af5-b0c4c7ba8551
+- link "17/12/2024, 17:11":
+  - /url: /calendar/day/2024-12-17
+- link "Week view":
+  - /url: /calendar/week/2024-12-17
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-17
+  - img
+- text: Updated
+- link "sanket abc jadhav":
+  - /url: /contacts/47973203-3240-42f7-bb17-4bff3d230668
+- link "17/12/2024, 17:12":
+  - /url: /calendar/day/2024-12-17
+- link "Week view":
+  - /url: /calendar/week/2024-12-17
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-17
+  - img
+- text: Updated
+- link "Shweta abc Jadhav":
+  - /url: /contacts/01ba90e5-9b90-4cf8-9f72-553fd0a46a68
+- link "17/12/2024, 17:19":
+  - /url: /calendar/day/2024-12-17
+- link "Week view":
+  - /url: /calendar/week/2024-12-17
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-17
+  - img
+- text: Updated
+- link "Snehal abc patil":
+  - /url: /contacts/71d498b8-c3a6-486c-bb99-6d5041a08594
+- link "17/12/2024, 17:20":
+  - /url: /calendar/day/2024-12-17
+- link "Week view":
+  - /url: /calendar/week/2024-12-17
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-17
+  - img
+- text: Updated
+- link "Akshay abc more":
+  - /url: /contacts/2804be53-7e61-4418-a720-d9143a588a6d
+- link "17/12/2024, 17:20":
+  - /url: /calendar/day/2024-12-17
+- link "Week view":
+  - /url: /calendar/week/2024-12-17
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-17
+  - img
+- text: Updated
+- link "chetan abc patil":
+  - /url: /contacts/076bf7d3-36b5-4970-a4de-a4469610ed81
+- link "17/12/2024, 17:20":
+  - /url: /calendar/day/2024-12-17
+- link "Week view":
+  - /url: /calendar/week/2024-12-17
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-17
+  - img
+- text: Updated
+- link "sanket abc jadhav":
+  - /url: /contacts/ac929e0a-b954-48aa-b28d-b65af7b71f38
+- link "17/12/2024, 17:20":
+  - /url: /calendar/day/2024-12-17
+- link "Week view":
+  - /url: /calendar/week/2024-12-17
+  - img
+- link "Month view":
+  - /url: /calendar/month/2024-12-17
+  - img
+- text: Updated
+- link "Anjali Patil":
+  - /url: /contacts/2737b144-9634-405b-b51d-61c62f064c3d
+- link "08/01/2025, 00:11":
+  - /url: /calendar/day/2025-01-08
+- link "Week view":
+  - /url: /calendar/week/2025-01-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-08
+  - img
+- text: Updated
+- link "Abhishek Patel":
+  - /url: /contacts/939ce41c-3009-4930-b6ff-1c77285fa042
+- link "08/01/2025, 00:11":
+  - /url: /calendar/day/2025-01-08
+- link "Week view":
+  - /url: /calendar/week/2025-01-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-08
+  - img
+- text: Updated
+- link "Amol Chemate":
+  - /url: /contacts/44e258aa-0019-447b-b6c6-200ff8f3f573
+- link "08/01/2025, 00:11":
+  - /url: /calendar/day/2025-01-08
+- link "Week view":
+  - /url: /calendar/week/2025-01-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-08
+  - img
+- text: Updated
+- link "Amruta Patil":
+  - /url: /contacts/f015a7e4-0f00-42e2-b432-deebf4d6d541
+- link "08/01/2025, 00:11":
+  - /url: /calendar/day/2025-01-08
+- link "Week view":
+  - /url: /calendar/week/2025-01-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-08
+  - img
+- text: Updated
+- link "Hemant Shah":
+  - /url: /contacts/87e4f7c2-70b4-424a-869a-28b8d24f4330
+- link "08/01/2025, 00:12":
+  - /url: /calendar/day/2025-01-08
+- link "Week view":
+  - /url: /calendar/week/2025-01-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-08
+  - img
+- text: Updated
+- link "Jyoti Magar":
+  - /url: /contacts/6ed1739d-bd5b-4f42-bda5-4dab685e82c6
+- link "08/01/2025, 00:12":
+  - /url: /calendar/day/2025-01-08
+- link "Week view":
+  - /url: /calendar/week/2025-01-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-08
+  - img
+- text: Updated
+- link "Kunal Gajare":
+  - /url: /contacts/2905ffe8-593d-48ea-9ae9-ab6cdc88fb4f
+- link "08/01/2025, 00:12":
+  - /url: /calendar/day/2025-01-08
+- link "Week view":
+  - /url: /calendar/week/2025-01-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-08
+  - img
+- text: Updated
+- link "aaa aaaa":
+  - /url: /contacts/8deadc3c-d584-4456-ae17-fa13a4170184
+- link "07/01/2025, 20:08":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "a aa":
+  - /url: /contacts/d731be85-c2cb-401a-bb5c-3ec00603b073
+- link "07/01/2025, 20:09":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "Anjali Patil":
+  - /url: /contacts/ee93b43f-4de9-4e17-b763-c576eee0b265
+- link "07/01/2025, 20:35":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "Anjali Patil":
+  - /url: /contacts/c9a68c7d-6003-40a2-bd9f-2a5b041a54a2
+- link "07/01/2025, 20:36":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "Anjali Patil":
+  - /url: /contacts/ea1c3550-f516-4637-beb7-8fa137a2961d
+- link "07/01/2025, 20:38":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "Abhishek Patel":
+  - /url: /contacts/9b39c843-80f4-4419-b5e8-7b57270a2723
+- link "07/01/2025, 20:38":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "Amol Chemate":
+  - /url: /contacts/0814eb09-c5a9-4af8-b64a-7f1e7126896a
+- link "07/01/2025, 20:38":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "Amruta Patil":
+  - /url: /contacts/0acd4634-062e-47af-aa2d-061cc0f85668
+- link "07/01/2025, 20:38":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "Hemant Shah":
+  - /url: /contacts/5051a6ff-2691-4452-992e-6e3b392252f8
+- link "07/01/2025, 20:39":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "Jyoti Magar":
+  - /url: /contacts/a58b0d92-d853-4a4a-b897-54623fe82ce5
+- link "07/01/2025, 20:39":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "Kunal Gajare":
+  - /url: /contacts/1df067cf-1d14-4c1e-a183-f6dd70887a92
+- link "07/01/2025, 20:39":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "Anjali Patil":
+  - /url: /contacts/e6ab0c58-2e86-493d-8f2a-ca6594661f65
+- link "07/01/2025, 20:49":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "Abhishek Patel":
+  - /url: /contacts/86de1509-00a6-41c8-87cb-5979ad20e3f6
+- link "07/01/2025, 20:49":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "Anjali Patil":
+  - /url: /contacts/08ee5a4c-34b7-4a7e-a1bf-b898ded67215
+- link "08/01/2025, 12:04":
+  - /url: /calendar/day/2025-01-08
+- link "Week view":
+  - /url: /calendar/week/2025-01-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-08
+  - img
+- text: Updated
+- link "Amol Chemate":
+  - /url: /contacts/5999bbbc-d714-470b-9128-fdaf660749a0
+- link "07/01/2025, 20:49":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "Abhishek Patel":
+  - /url: /contacts/6ced1394-2537-47e2-a4d7-7d73009f5505
+- link "08/01/2025, 12:04":
+  - /url: /calendar/day/2025-01-08
+- link "Week view":
+  - /url: /calendar/week/2025-01-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-08
+  - img
+- text: Updated
+- link "Amruta Patil":
+  - /url: /contacts/8ee55a71-dce8-4ab6-b542-886459e12c29
+- link "07/01/2025, 20:49":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "Amol Chemate":
+  - /url: /contacts/d6db9bd2-08cb-46d6-ab83-bdb3cd0fe5b5
+- link "08/01/2025, 12:04":
+  - /url: /calendar/day/2025-01-08
+- link "Week view":
+  - /url: /calendar/week/2025-01-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-08
+  - img
+- text: Updated
+- link "Hemant Shah":
+  - /url: /contacts/d904fe28-ebd1-4e88-840c-8e2a2d8dc9a7
+- link "07/01/2025, 20:49":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "Amruta Patil":
+  - /url: /contacts/940cd5bd-6134-46ae-a213-62073cfd48c2
+- link "08/01/2025, 12:04":
+  - /url: /calendar/day/2025-01-08
+- link "Week view":
+  - /url: /calendar/week/2025-01-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-08
+  - img
+- text: Updated
+- link "Jyoti Magar":
+  - /url: /contacts/715af5e1-fe69-4984-95f4-0cb098f5322c
+- link "07/01/2025, 20:49":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "Hemant Shah":
+  - /url: /contacts/9d2e74f2-29b0-4a38-ad04-be58e1146edc
+- link "08/01/2025, 12:04":
+  - /url: /calendar/day/2025-01-08
+- link "Week view":
+  - /url: /calendar/week/2025-01-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-08
+  - img
+- text: Updated
+- link "Kunal Gajare":
+  - /url: /contacts/29dc640c-7fdb-45fa-b96e-40aa6777b2de
+- link "07/01/2025, 20:50":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "Jyoti Magar":
+  - /url: /contacts/d99d3a67-7a2f-4511-93e3-c957708efd13
+- link "08/01/2025, 12:05":
+  - /url: /calendar/day/2025-01-08
+- link "Week view":
+  - /url: /calendar/week/2025-01-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-08
+  - img
+- text: Updated
+- link "Anjali Patil":
+  - /url: /contacts/bcef6f42-1c76-477b-beb2-f9ea47d7f107
+- link "07/01/2025, 20:53":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "Kunal Gajare":
+  - /url: /contacts/4d33d867-0924-4be8-9345-f04b0986cad6
+- link "08/01/2025, 12:05":
+  - /url: /calendar/day/2025-01-08
+- link "Week view":
+  - /url: /calendar/week/2025-01-08
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-08
+  - img
+- text: Updated
+- link "Abhishek Patel":
+  - /url: /contacts/7c6ea935-6bff-4459-89d2-6a2a1b69cfca
+- link "07/01/2025, 20:54":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "Amol Chemate":
+  - /url: /contacts/fc1c210a-03eb-4f1b-83dd-f3ab488e2191
+- link "07/01/2025, 20:54":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "Amruta Patil":
+  - /url: /contacts/4235931e-6578-4117-b3f7-f9f386f24377
+- link "07/01/2025, 20:54":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "Hemant Shah":
+  - /url: /contacts/0dd4bbd5-0361-41f9-8257-fca1b300b0ef
+- link "07/01/2025, 20:54":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "Jyoti Magar":
+  - /url: /contacts/f46b2848-8edc-46a6-a97d-2ee955489595
+- link "07/01/2025, 20:54":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "Kunal Gajare":
+  - /url: /contacts/c809da98-1ba3-499d-a506-7204e945da41
+- link "07/01/2025, 20:54":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "Anjali Patil":
+  - /url: /contacts/420f59a4-14f5-47f8-8505-8b4516fa1395
+- link "07/01/2025, 20:59":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "Abhishek Patel":
+  - /url: /contacts/baee0d0d-e704-4bd6-be55-455019cba7e8
+- link "07/01/2025, 20:59":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "Amol Chemate":
+  - /url: /contacts/f856b8a2-034e-4700-b6a5-96689113ed2c
+- link "07/01/2025, 20:59":
+  - /url: /calendar/day/2025-01-07
+- link "Week view":
+  - /url: /calendar/week/2025-01-07
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-01-07
+  - img
+- text: Updated
+- link "kartiki pande":
+  - /url: /contacts/dfa48332-4c4b-4242-9d14-f5a17bb5981d
+- link "29/11/2025, 16:27":
+  - /url: /calendar/day/2025-11-29
+- link "Week view":
+  - /url: /calendar/week/2025-11-29
+  - img
+- link "Month view":
+  - /url: /calendar/month/2025-11-29
+  - img
+- text: Updated
+- button "Drag to reorder":
+  - img
+- text: Call queue
+- button "Reload card":
+  - img
+- button "Remove card":
+  - img
+- link "Open call queue":
+  - /url: /calls/queue
+- paragraph: Call queue is empty.
+- button "Drag to reorder":
+  - img
+- text: Deal pipeline
+- button "Reload card":
+  - img
+- button "Remove card":
+  - img
+- text: Deals by stage
+- link "View all":
+  - /url: /deals
+- text: Unknown 175 $468K Won 22 Negotiate 2 $2K Qualify 1 $2K
+- button "Drag to reorder":
+  - img
+- text: SMS messages
+- button "Reload card":
+  - img
+- button "Remove card":
+  - img
+- link "Open messages":
+  - /url: /messages
+- paragraph: No incoming SMS messages.
+- button "Drag to reorder":
+  - img
+- text: WhatsApp messages
+- button "Reload card":
+  - img
+- button "Remove card":
+  - img
+- link "Open messages":
+  - /url: /messages
+- paragraph: No WhatsApp messages.
+- button "Drag to reorder":
+  - img
+- text: Upcoming calls
+- button "Reload card":
+  - img
+- button "Remove card":
+  - img
+- link "View all":
+  - /url: /calls
+- paragraph: No upcoming calls scheduled.
+- button "Drag to reorder":
+  - img
+- text: Open tasks
+- button "Reload card":
+  - img
+- button "Remove card":
+  - img
+- link "View all":
+  - /url: /tasks
+- text: avc 1280d overdue DemoTitle 239d overdue DemoTitle 210d overdue dsad 175d overdue DemoTitle 93d overdue DemoTitle 93d overdue DemoTitle 93d overdue DemoTitle 93d overdue
+- button "Drag to reorder":
+  - img
+- text: Today's schedule
+- button "Reload card":
+  - img
+- button "Remove card":
+  - img
+- img
+- text: Saturday 26 September
+- link "Open calendar":
+  - /url: /calendar
+- paragraph: No events scheduled today.
+- button "Drag to reorder":
+  - img
+- text: Recent contacts
+- button "Reload card":
+  - img
+- button "Remove card":
+  - img
+- link "View all":
+  - /url: /contacts
+- text: AG Arjun Gibson Today ZC Zoie Connelly Today JW Jenna Windler Today PD Pearl Daugherty Today GH Grover Heaney Today BS Barry Stokes Today ES Eleanor Sanford Today RR Roy Runolfsson Today
+- button "Drag to reorder":
+  - img
+- text: Recent deals
+- button "Reload card":
+  - img
+- button "Remove card":
+  - img
+- link "View all":
+  - /url: /deals
+- img
+- text: Mobile Deals
+- img
+- text: Mobile Deals
+- img
+- text: Mobile Deals
+- img
+- text: Mobile Deals
+- img
+- text: Mobile Deals
+- img
+- text: Mobile Deals
+- img
+- text: Mobile Deals
+- img
+- text: Mobile Deals
+- button "Drag to reorder":
+  - img
+- text: Recent companies
+- button "Reload card":
+  - img
+- button "Remove card":
+  - img
+- link "View all":
+  - /url: /companies
+- text: TS Tech System 4 Sept TS Tech System 4 Sept TS Tech System 4 Sept TS Tech System 29 Aug TS Tech System 29 Aug TS Tech System 29 Aug TS Tech System 29 Aug TS Tech System 25 Aug
+- button "Drag to reorder":
+  - img
+- text: Form submissions
+- button "Reload card":
+  - img
+- button "Remove card":
+  - img
+- link "View all":
+  - /url: /forms
+- paragraph: No form submissions yet.
+- button "Drag to reorder":
+  - img
+- text: Deal summary
+- button "Reload card":
+  - img
+- button "Remove card":
+  - img
+- link "View deals":
+  - /url: /deals
+- img
+- text: 789 Total deals
+- img
+- text: 178 Open deals
+- img
+- text: $472,105 Total value
+- img
+- text: $26,228 Avg value
+- button "Drag to reorder":
+  - img
+- text: Sales targets
+- button "Reload card":
+  - img
+- button "Remove card":
+  - img
+- link "View all":
+  - /url: /deals/targets
+- paragraph: No records found
+- button "Drag to reorder":
+  - img
+- text: Recent calls
+- button "Reload card":
+  - img
+- button "Remove card":
+  - img
+- link "View all":
+  - /url: /calls
+- paragraph: No calls recorded yet.
+- status
+- img "notification icon"
+- text: Subscribe to our notifications for the latest news and updates. You can disable anytime.
+- button "Subscribe"
+- button "Later"
+```
+
+# Test source
+
+```ts
+  1  | import { test , expect} from '../fixtures/GlobalFixture.js';
+  2  | import { JsonReader } from '../reader/JsonReader.js';
+  3  | import { ExcelReader } from '../reader/ExcelReader.js';
+  4  | import { FakerUtils } from '../utils/FakerUtils.js';
+  5  | 
+  6  | //if you want to inject custom fixture in test level then compulsory we have import test function from Fixture locations
+  7  | test("Verify Used is on Contact Page", async ({page, contactPage})=>{
+  8  | 
+  9  |     await page.goto("/");
+  10 | 
+  11 |     await contactPage.clickOnContactLink();
+  12 | 
+> 13 |     await expect(page).toHaveURL("/contacts");
+     |                        ^ Error: expect(page).toHaveURL(expected) failed
+  14 | 
+  15 | });
+  16 | 
+  17 | 
+  18 | test("Create new Contact Test Cases", async ({ page, contactPage })=>{
+  19 | 
+  20 |     await page.goto("/");
+  21 | 
+  22 |     await contactPage.clickOnContactLink();
+  23 | 
+  24 |     await contactPage.clickOnCreateButton();
+  25 | 
+  26 |    // const testData = await JsonReader.readJsonValue("ContactPage");
+  27 |     const testData = await ExcelReader.readFile("ExcelTestData", "ContactPage");
+  28 | 
+  29 |     const fname = testData[2].firstName;
+  30 |     const lname = testData[2].lastName;
+  31 |     const categoryName = testData[2].categoryName;
+  32 |     const statusName = testData[2].statusName;
+  33 | 
+  34 | 
+  35 |     await contactPage.enterFirstName(FakerUtils.generateFirstName());
+  36 | 
+  37 |     await contactPage.enterLastName(FakerUtils.generateLastName());
+  38 | 
+  39 |     await page.waitForTimeout(3000);
+  40 | 
+  41 |     await contactPage.selectCategoryValue(categoryName);
+  42 | 
+  43 |     await contactPage.selectStatus(statusName);
+  44 | 
+  45 |     await contactPage.clickOnSaveButton();
+  46 | 
+  47 | });
+  48 | 
+  49 | 
+```

@@ -1,0 +1,4 @@
+2026-09-26 12:44:59 [info]: Clicking on locator('//ul[@class=\'_navList_3as89_80\']/descendant::a[@href=\'/deals\']')
+2026-09-26 12:45:00 [info]: Clicking on locator('//button[text()=\'Create\']')
+2026-09-26 12:45:02 [info]: Entering Mobile Deals text in locator('#title')
+2026-09-26 12:45:03 [info]: Clicking on getByRole('button', { name: 'Save' })

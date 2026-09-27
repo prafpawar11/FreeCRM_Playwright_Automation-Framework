@@ -1,0 +1,761 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: ContactPageTest.spec.js >> Create new Contact Test Cases
+- Location: tests\ContactPageTest.spec.js:18:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - navigation "Main navigation" [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - img "FreeCRM" [ref=e7]
+          - generic [ref=e8]: FreeCRM
+        - button "Collapse navigation" [ref=e9] [cursor=pointer]
+      - list [ref=e14]:
+        - listitem [ref=e15]:
+          - link "Home" [ref=e16] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e22]:
+          - link "Contacts" [ref=e23] [cursor=pointer]:
+            - /url: /contacts
+        - listitem [ref=e31]:
+          - link "Companies" [ref=e32] [cursor=pointer]:
+            - /url: /companies
+        - listitem [ref=e43]:
+          - link "Calendar" [ref=e44] [cursor=pointer]:
+            - /url: /calendar
+        - listitem [ref=e58]:
+          - link "Deals" [ref=e59] [cursor=pointer]:
+            - /url: /deals
+        - listitem [ref=e65]:
+          - link "Tasks" [ref=e66] [cursor=pointer]:
+            - /url: /tasks
+        - listitem [ref=e72]:
+          - link "Cases" [ref=e73] [cursor=pointer]:
+            - /url: /cases
+        - listitem [ref=e79]:
+          - link "Calls" [ref=e80] [cursor=pointer]:
+            - /url: /calls
+        - listitem [ref=e85]:
+          - link "Email" [ref=e86] [cursor=pointer]:
+            - /url: /email
+        - listitem [ref=e92]:
+          - link "Documents" [ref=e93] [cursor=pointer]:
+            - /url: /documents
+        - listitem [ref=e98]:
+          - link "Campaigns" [ref=e99] [cursor=pointer]:
+            - /url: /campaigns
+        - listitem [ref=e105]:
+          - link "Forms" [ref=e106] [cursor=pointer]:
+            - /url: /forms
+        - listitem [ref=e115]:
+          - link "Reports" [ref=e116] [cursor=pointer]:
+            - /url: /reports
+        - listitem [ref=e123]:
+          - link "Products" [ref=e124] [cursor=pointer]:
+            - /url: /products
+        - listitem [ref=e132]:
+          - link "Invoices" [ref=e133] [cursor=pointer]:
+            - /url: /invoices
+      - link "Settings" [ref=e141] [cursor=pointer]:
+        - /url: /settings
+    - generic [ref=e147]:
+      - banner [ref=e148]:
+        - generic "Soft Tech enterprises" [ref=e149]:
+          - strong [ref=e150]: Soft Tech enterprises
+        - generic [ref=e151]:
+          - 'button "Balance: $0.00" [ref=e152] [cursor=pointer]':
+            - generic [ref=e153]: "Balance:"
+            - generic [ref=e154]: $0.00
+          - link "Free account" [ref=e155] [cursor=pointer]:
+            - /url: /settings/billing/plan
+          - search [ref=e163]:
+            - searchbox "Search" [ref=e164]
+          - button "Pinned Records" [ref=e166] [cursor=pointer]
+          - button "Last accessed" [ref=e171] [cursor=pointer]
+          - button "Rubbish Bin" [ref=e176] [cursor=pointer]
+          - button "Contact support" [ref=e183] [cursor=pointer]
+          - button "User menu" [ref=e187] [cursor=pointer]:
+            - generic [ref=e188]: PP
+      - generic [ref=e190]:
+        - generic [ref=e191]:
+          - heading "New Contact" [level=2] [ref=e192]
+          - generic [ref=e193]:
+            - button "Cancel" [ref=e194] [cursor=pointer]
+            - button "Save" [ref=e195] [cursor=pointer]
+        - generic [ref=e197]:
+          - generic [ref=e198]:
+            - generic [ref=e200]:
+              - generic [ref=e201]: First Name*
+              - textbox "First Name" [ref=e203]: Ivory
+            - generic [ref=e205]:
+              - generic [ref=e206]: Last Name*
+              - textbox "Last Name" [active] [ref=e208]: Osinski
+            - generic [ref=e210]:
+              - generic [ref=e211]: Middle Name(s)
+              - textbox "Middle Name(s)" [ref=e213]
+            - generic [ref=e215]:
+              - generic [ref=e216]: Company
+              - button "Search" [ref=e218] [cursor=pointer]
+            - generic [ref=e224]:
+              - generic [ref=e225]: Access
+              - generic [ref=e226]:
+                - button "Public" [ref=e227] [cursor=pointer]
+                - button "Select users allowed access." [ref=e233] [cursor=pointer]
+            - generic [ref=e238]:
+              - generic [ref=e239]: Tags
+              - textbox "Add tags…" [ref=e241]
+          - generic [ref=e242]:
+            - generic [ref=e243]:
+              - generic [ref=e244]: Email
+              - button "Add" [ref=e245] [cursor=pointer]
+            - generic [ref=e250]:
+              - textbox "Email" [ref=e253]
+              - textbox "Type" [ref=e256]
+          - generic [ref=e257]:
+            - generic [ref=e259]:
+              - generic [ref=e260]: Category
+              - combobox "Category" [ref=e262] [cursor=pointer]:
+                - option "Select Category"
+                - option "Lead"
+                - option "Customer"
+                - option "Contact" [selected]
+                - option "Affiliate"
+            - generic [ref=e264]:
+              - generic [ref=e265]: Status
+              - combobox "Status" [ref=e267] [cursor=pointer]:
+                - option "Select Status"
+                - option "New" [selected]
+                - option "Active"
+                - option "Inactive"
+                - option "On Hold"
+                - option "Terminated"
+                - option "Hot"
+            - generic [ref=e269]:
+              - generic [ref=e270]: Description
+              - textbox [ref=e271]
+            - generic [ref=e273]:
+              - generic [ref=e274]:
+                - generic [ref=e275]: Social Channels
+                - button "Add" [ref=e276] [cursor=pointer]
+              - generic [ref=e281]:
+                - combobox "Network" [ref=e282] [cursor=pointer]:
+                  - option "Twitter" [selected]
+                  - option "Facebook"
+                  - option "LinkedIn"
+                  - option "TikTok"
+                  - option "Instagram"
+                  - option "Yelp"
+                - textbox "Twitter handle" [ref=e283]
+            - generic [ref=e285]:
+              - generic [ref=e286]: Time Zone
+              - button "Select timezone…" [ref=e287] [cursor=pointer]
+            - generic [ref=e292]:
+              - generic [ref=e293]:
+                - generic [ref=e294]: Address
+                - button "Add" [ref=e295] [cursor=pointer]
+              - generic [ref=e301]:
+                - textbox "Street address" [ref=e302]
+                - textbox "City" [ref=e303]
+                - textbox "State / Province" [ref=e304]
+                - textbox "Postal code" [ref=e305]
+                - combobox [ref=e306] [cursor=pointer]:
+                  - option "Country…"
+                  - option "🇺🇸 United States"
+                  - option "🇬🇧 United Kingdom"
+                  - option "🇨🇦 Canada"
+                  - option "🇦🇺 Australia"
+                  - option "🇩🇪 Germany"
+                  - option "🇫🇷 France"
+                  - option "🇪🇸 Spain"
+                  - option "🇮🇹 Italy"
+                  - option "🇳🇱 Netherlands"
+                  - option "🇧🇪 Belgium"
+                  - option "🇨🇭 Switzerland"
+                  - option "🇦🇹 Austria"
+                  - option "🇸🇪 Sweden"
+                  - option "🇳🇴 Norway"
+                  - option "🇩🇰 Denmark"
+                  - option "🇫🇮 Finland"
+                  - option "🇵🇱 Poland"
+                  - option "🇵🇹 Portugal"
+                  - option "🇮🇪 Ireland"
+                  - option "🇮🇱 Israel"
+                  - option "🇿🇦 South Africa"
+                  - option "🇳🇬 Nigeria"
+                  - option "🇰🇪 Kenya"
+                  - option "🇪🇬 Egypt"
+                  - option "🇮🇳 India" [selected]
+                  - option "🇵🇰 Pakistan"
+                  - option "🇧🇩 Bangladesh"
+                  - option "🇨🇳 China"
+                  - option "🇯🇵 Japan"
+                  - option "🇰🇷 South Korea"
+                  - option "🇮🇩 Indonesia"
+                  - option "🇲🇾 Malaysia"
+                  - option "🇸🇬 Singapore"
+                  - option "🇹🇭 Thailand"
+                  - option "🇵🇭 Philippines"
+                  - option "🇻🇳 Vietnam"
+                  - option "🇷🇺 Russia"
+                  - option "🇺🇦 Ukraine"
+                  - option "🇹🇷 Turkey"
+                  - option "🇸🇦 Saudi Arabia"
+                  - option "🇦🇪 UAE"
+                  - option "🇧🇷 Brazil"
+                  - option "🇲🇽 Mexico"
+                  - option "🇦🇷 Argentina"
+                  - option "🇨🇱 Chile"
+                  - option "🇨🇴 Colombia"
+                  - option "🇳🇿 New Zealand"
+                  - option "🇭🇰 Hong Kong"
+                  - option "🇹🇼 Taiwan"
+                  - option "🇬🇷 Greece"
+                  - option "🇦🇫 Afghanistan"
+                  - option "🇦🇱 Albania"
+                  - option "🇩🇿 Algeria"
+                  - option "🇦🇸 American Samoa"
+                  - option "🇦🇩 Andorra"
+                  - option "🇦🇴 Angola"
+                  - option "🇦🇮 Anguilla"
+                  - option "🇦🇶 Antarctica"
+                  - option "🇦🇬 Antigua and Barbuda"
+                  - option "🇦🇲 Armenia"
+                  - option "🇦🇼 Aruba"
+                  - option "🇦🇿 Azerbaijan"
+                  - option "🇧🇸 Bahamas (The)"
+                  - option "🇧🇭 Bahrain"
+                  - option "🇧🇧 Barbados"
+                  - option "🇧🇾 Belarus"
+                  - option "🇧🇿 Belize"
+                  - option "🇧🇯 Benin"
+                  - option "🇧🇲 Bermuda"
+                  - option "🇧🇹 Bhutan"
+                  - option "🇧🇴 Bolivia"
+                  - option "🇧🇶 Bonaire, Sint Eustatius and Saba"
+                  - option "🇧🇦 Bosnia and Herzegovina"
+                  - option "🇧🇼 Botswana"
+                  - option "🇧🇻 Bouvet Island"
+                  - option "🇮🇴 British Indian Ocean Territory"
+                  - option "🇧🇳 Brunei"
+                  - option "🇧🇬 Bulgaria"
+                  - option "🇧🇫 Burkina Faso"
+                  - option "🇧🇮 Burundi"
+                  - option "🇨🇻 Cabo Verde"
+                  - option "🇰🇭 Cambodia"
+                  - option "🇨🇲 Cameroon"
+                  - option "🇰🇾 Cayman Islands"
+                  - option "🇨🇫 Central African Republic"
+                  - option "🇹🇩 Chad"
+                  - option "🇨🇽 Christmas Island"
+                  - option "🇨🇨 Cocos (Keeling) Islands"
+                  - option "🇰🇲 Comoros"
+                  - option "🇨🇬 Congo"
+                  - option "🇨🇰 Cook Islands"
+                  - option "🇨🇷 Costa Rica"
+                  - option "🇭🇷 Croatia"
+                  - option "🇨🇺 Cuba"
+                  - option "🇨🇼 Curaçao"
+                  - option "🇨🇾 Cyprus"
+                  - option "🇨🇿 Czechia"
+                  - option "🇨🇮 Côte d'Ivoire"
+                  - option "🇨🇩 Democratic Republic of the Congo"
+                  - option "🇩🇯 Djibouti"
+                  - option "🇩🇲 Dominica"
+                  - option "🇩🇴 Dominican Republic"
+                  - option "🇪🇨 Ecuador"
+                  - option "🇸🇻 El Salvador"
+                  - option "🇬🇶 Equatorial Guinea"
+                  - option "🇪🇷 Eritrea"
+                  - option "🇪🇪 Estonia"
+                  - option "🇸🇿 Eswatini"
+                  - option "🇪🇹 Ethiopia"
+                  - option "🇫🇰 Falkland Islands (Malvinas)"
+                  - option "🇫🇴 Faroe Islands"
+                  - option "🇫🇯 Fiji"
+                  - option "🇬🇫 French Guiana"
+                  - option "🇵🇫 French Polynesia"
+                  - option "🇹🇫 French Southern Territories"
+                  - option "🇬🇦 Gabon"
+                  - option "🇬🇲 Gambia"
+                  - option "🇬🇪 Georgia"
+                  - option "🇬🇭 Ghana"
+                  - option "🇬🇮 Gibraltar"
+                  - option "🇬🇱 Greenland"
+                  - option "🇬🇩 Grenada"
+                  - option "🇬🇵 Guadeloupe"
+                  - option "🇬🇺 Guam"
+                  - option "🇬🇹 Guatemala"
+                  - option "🇬🇬 Guernsey"
+                  - option "🇬🇳 Guinea"
+                  - option "🇬🇼 Guinea-Bissau"
+                  - option "🇬🇾 Guyana"
+                  - option "🇭🇹 Haiti"
+                  - option "🇭🇲 Heard Island and McDonald Islands"
+                  - option "🇭🇳 Honduras"
+                  - option "🇭🇺 Hungary"
+                  - option "🇮🇸 Iceland"
+                  - option "🇮🇷 Iran"
+                  - option "🇮🇶 Iraq"
+                  - option "🇮🇲 Isle of Man"
+                  - option "🇯🇲 Jamaica"
+                  - option "🇯🇪 Jersey"
+                  - option "🇯🇴 Jordan"
+                  - option "🇰🇿 Kazakhstan"
+                  - option "🇰🇮 Kiribati"
+                  - option "🇽🇰 Kosovo, Republic of"
+                  - option "🇰🇼 Kuwait"
+                  - option "🇰🇬 Kyrgyzstan"
+                  - option "🇱🇦 Laos"
+                  - option "🇱🇻 Latvia"
+                  - option "🇱🇧 Lebanon"
+                  - option "🇱🇸 Lesotho"
+                  - option "🇱🇷 Liberia"
+                  - option "🇱🇾 Libya"
+                  - option "🇱🇮 Liechtenstein"
+                  - option "🇱🇹 Lithuania"
+                  - option "🇱🇺 Luxembourg"
+                  - option "🇲🇴 Macao"
+                  - option "🇲🇬 Madagascar"
+                  - option "🇲🇼 Malawi"
+                  - option "🇲🇻 Maldives"
+                  - option "🇲🇱 Mali"
+                  - option "🇲🇹 Malta"
+                  - option "🇲🇭 Marshall Islands"
+                  - option "🇲🇶 Martinique"
+                  - option "🇲🇷 Mauritania"
+                  - option "🇲🇺 Mauritius"
+                  - option "🇾🇹 Mayotte"
+                  - option "🇫🇲 Micronesia"
+                  - option "🇲🇩 Moldova"
+                  - option "🇲🇨 Monaco"
+                  - option "🇲🇳 Mongolia"
+                  - option "🇲🇪 Montenegro"
+                  - option "🇲🇸 Montserrat"
+                  - option "🇲🇦 Morocco"
+                  - option "🇲🇿 Mozambique"
+                  - option "🇲🇲 Myanmar"
+                  - option "🇳🇦 Namibia"
+                  - option "🇳🇷 Nauru"
+                  - option "🇳🇵 Nepal"
+                  - option "🇳🇨 New Caledonia"
+                  - option "🇳🇮 Nicaragua"
+                  - option "🇳🇪 Niger"
+                  - option "🇳🇺 Niue"
+                  - option "🇳🇫 Norfolk Island"
+                  - option "🇰🇵 North Korea"
+                  - option "🇲🇰 North Macedonia"
+                  - option "🇲🇵 Northern Mariana Islands"
+                  - option "🇴🇲 Oman"
+                  - option "🇵🇼 Palau"
+                  - option "🇵🇸 Palestine"
+                  - option "🇵🇦 Panama"
+                  - option "🇵🇬 Papua New Guinea"
+                  - option "🇵🇾 Paraguay"
+                  - option "🇵🇪 Peru"
+                  - option "🇵🇳 Pitcairn"
+                  - option "🇵🇷 Puerto Rico"
+                  - option "🇶🇦 Qatar"
+                  - option "🇷🇴 Romania"
+                  - option "🇷🇼 Rwanda"
+                  - option "🇷🇪 Réunion"
+                  - option "🇧🇱 Saint Barthélemy"
+                  - option "🇸🇭 Saint Helena"
+                  - option "🇰🇳 Saint Kitts and Nevis"
+                  - option "🇱🇨 Saint Lucia"
+                  - option "🇲🇫 Saint Martin (French part)"
+                  - option "🇵🇲 Saint Pierre and Miquelon"
+                  - option "🇻🇨 Saint Vincent and the Grenadines"
+                  - option "🇼🇸 Samoa"
+                  - option "🇸🇲 San Marino"
+                  - option "🇸🇹 Sao Tome and Principe"
+                  - option "🇸🇳 Senegal"
+                  - option "🇷🇸 Serbia"
+                  - option "🇸🇨 Seychelles"
+                  - option "🇸🇱 Sierra Leone"
+                  - option "🇸🇽 Sint Maarten (Dutch part)"
+                  - option "🇸🇰 Slovakia"
+                  - option "🇸🇮 Slovenia"
+                  - option "🇸🇧 Solomon Islands"
+                  - option "🇸🇴 Somalia"
+                  - option "🇬🇸 South Georgia"
+                  - option "🇸🇸 South Sudan"
+                  - option "🇱🇰 Sri Lanka"
+                  - option "🇸🇩 Sudan"
+                  - option "🇸🇷 Suriname"
+                  - option "🇸🇯 Svalbard and Jan Mayen"
+                  - option "🇸🇾 Syria"
+                  - option "🇹🇯 Tajikistan"
+                  - option "🇹🇿 Tanzania"
+                  - option "🇹🇱 Timor-Leste"
+                  - option "🇹🇬 Togo"
+                  - option "🇹🇰 Tokelau"
+                  - option "🇹🇴 Tonga"
+                  - option "🇹🇹 Trinidad and Tobago"
+                  - option "🇹🇳 Tunisia"
+                  - option "🇹🇲 Turkmenistan"
+                  - option "🇹🇨 Turks and Caicos Islands"
+                  - option "🇹🇻 Tuvalu"
+                  - option "🇺🇬 Uganda"
+                  - option "🇺🇲 United States Minor Outlying Islands"
+                  - option "🇺🇾 Uruguay"
+                  - option "🇺🇿 Uzbekistan"
+                  - option "🇻🇺 Vanuatu"
+                  - option "🇻🇦 Vatican City"
+                  - option "🇻🇪 Venezuela"
+                  - option "🇻🇬 Virgin Islands (British)"
+                  - option "🇻🇮 Virgin Islands (U.S.)"
+                  - option "🇼🇫 Wallis and Futuna"
+                  - option "🇪🇭 Western Sahara"
+                  - option "🇾🇪 Yemen"
+                  - option "🇿🇲 Zambia"
+                  - option "🇿🇼 Zimbabwe"
+                  - option "🇦🇽 Åland Islands"
+          - generic [ref=e307]:
+            - generic [ref=e308]:
+              - generic [ref=e309]: Phone
+              - button "Add" [ref=e310] [cursor=pointer]
+            - generic [ref=e315]:
+              - generic [ref=e316] [cursor=pointer]:
+                - generic [ref=e317]: 🇮🇳
+                - generic [ref=e318]: "+91"
+                - combobox "Country code" [ref=e321]:
+                  - option "🇺🇸 United States (+1)"
+                  - option "🇬🇧 United Kingdom (+44)"
+                  - option "🇨🇦 Canada (+1)"
+                  - option "🇦🇺 Australia (+61)"
+                  - option "🇩🇪 Germany (+49)"
+                  - option "🇫🇷 France (+33)"
+                  - option "🇪🇸 Spain (+34)"
+                  - option "🇮🇹 Italy (+39)"
+                  - option "🇳🇱 Netherlands (+31)"
+                  - option "🇧🇪 Belgium (+32)"
+                  - option "🇨🇭 Switzerland (+41)"
+                  - option "🇦🇹 Austria (+43)"
+                  - option "🇸🇪 Sweden (+46)"
+                  - option "🇳🇴 Norway (+47)"
+                  - option "🇩🇰 Denmark (+45)"
+                  - option "🇫🇮 Finland (+358)"
+                  - option "🇵🇱 Poland (+48)"
+                  - option "🇵🇹 Portugal (+351)"
+                  - option "🇮🇪 Ireland (+353)"
+                  - option "🇮🇱 Israel (+972)"
+                  - option "🇿🇦 South Africa (+27)"
+                  - option "🇳🇬 Nigeria (+234)"
+                  - option "🇰🇪 Kenya (+254)"
+                  - option "🇪🇬 Egypt (+20)"
+                  - option "🇮🇳 India (+91)" [selected]
+                  - option "🇵🇰 Pakistan (+92)"
+                  - option "🇧🇩 Bangladesh (+880)"
+                  - option "🇨🇳 China (+86)"
+                  - option "🇯🇵 Japan (+81)"
+                  - option "🇰🇷 South Korea (+82)"
+                  - option "🇮🇩 Indonesia (+62)"
+                  - option "🇲🇾 Malaysia (+60)"
+                  - option "🇸🇬 Singapore (+65)"
+                  - option "🇹🇭 Thailand (+66)"
+                  - option "🇵🇭 Philippines (+63)"
+                  - option "🇻🇳 Vietnam (+84)"
+                  - option "🇷🇺 Russia (+7)"
+                  - option "🇺🇦 Ukraine (+380)"
+                  - option "🇹🇷 Turkey (+90)"
+                  - option "🇸🇦 Saudi Arabia (+966)"
+                  - option "🇦🇪 UAE (+971)"
+                  - option "🇧🇷 Brazil (+55)"
+                  - option "🇲🇽 Mexico (+52)"
+                  - option "🇦🇷 Argentina (+54)"
+                  - option "🇨🇱 Chile (+56)"
+                  - option "🇨🇴 Colombia (+57)"
+                  - option "🇳🇿 New Zealand (+64)"
+                  - option "🇭🇰 Hong Kong (+852)"
+                  - option "🇹🇼 Taiwan (+886)"
+                  - option "🇬🇷 Greece (+30)"
+                  - option "🇦🇫 Afghanistan (+93)"
+                  - option "🇦🇱 Albania (+355)"
+                  - option "🇩🇿 Algeria (+213)"
+                  - option "🇦🇸 American Samoa (+1)"
+                  - option "🇦🇩 Andorra (+376)"
+                  - option "🇦🇴 Angola (+244)"
+                  - option "🇦🇮 Anguilla (+1)"
+                  - option "🇦🇶 Antarctica ()"
+                  - option "🇦🇬 Antigua and Barbuda (+1)"
+                  - option "🇦🇲 Armenia (+374)"
+                  - option "🇦🇼 Aruba (+297)"
+                  - option "🇦🇿 Azerbaijan (+994)"
+                  - option "🇧🇸 Bahamas (The) (+1)"
+                  - option "🇧🇭 Bahrain (+973)"
+                  - option "🇧🇧 Barbados (+1)"
+                  - option "🇧🇾 Belarus (+375)"
+                  - option "🇧🇿 Belize (+501)"
+                  - option "🇧🇯 Benin (+229)"
+                  - option "🇧🇲 Bermuda (+1)"
+                  - option "🇧🇹 Bhutan (+975)"
+                  - option "🇧🇴 Bolivia (+591)"
+                  - option "🇧🇶 Bonaire, Sint Eustatius and Saba (+599)"
+                  - option "🇧🇦 Bosnia and Herzegovina (+387)"
+                  - option "🇧🇼 Botswana (+267)"
+                  - option "🇧🇻 Bouvet Island ()"
+                  - option "🇮🇴 British Indian Ocean Territory (+246)"
+                  - option "🇧🇳 Brunei (+673)"
+                  - option "🇧🇬 Bulgaria (+359)"
+                  - option "🇧🇫 Burkina Faso (+226)"
+                  - option "🇧🇮 Burundi (+257)"
+                  - option "🇨🇻 Cabo Verde (+238)"
+                  - option "🇰🇭 Cambodia (+855)"
+                  - option "🇨🇲 Cameroon (+237)"
+                  - option "🇰🇾 Cayman Islands (+1)"
+                  - option "🇨🇫 Central African Republic (+236)"
+                  - option "🇹🇩 Chad (+235)"
+                  - option "🇨🇽 Christmas Island (+61)"
+                  - option "🇨🇨 Cocos (Keeling) Islands (+61)"
+                  - option "🇰🇲 Comoros (+269)"
+                  - option "🇨🇬 Congo (+242)"
+                  - option "🇨🇰 Cook Islands (+682)"
+                  - option "🇨🇷 Costa Rica (+506)"
+                  - option "🇭🇷 Croatia (+385)"
+                  - option "🇨🇺 Cuba (+53)"
+                  - option "🇨🇼 Curaçao (+599)"
+                  - option "🇨🇾 Cyprus (+357)"
+                  - option "🇨🇿 Czechia (+420)"
+                  - option "🇨🇮 Côte d'Ivoire (+225)"
+                  - option "🇨🇩 Democratic Republic of the Congo (+243)"
+                  - option "🇩🇯 Djibouti (+253)"
+                  - option "🇩🇲 Dominica (+1)"
+                  - option "🇩🇴 Dominican Republic (+1)"
+                  - option "🇪🇨 Ecuador (+593)"
+                  - option "🇸🇻 El Salvador (+503)"
+                  - option "🇬🇶 Equatorial Guinea (+240)"
+                  - option "🇪🇷 Eritrea (+291)"
+                  - option "🇪🇪 Estonia (+372)"
+                  - option "🇸🇿 Eswatini (+268)"
+                  - option "🇪🇹 Ethiopia (+251)"
+                  - option "🇫🇰 Falkland Islands (Malvinas) (+500)"
+                  - option "🇫🇴 Faroe Islands (+298)"
+                  - option "🇫🇯 Fiji (+679)"
+                  - option "🇬🇫 French Guiana (+594)"
+                  - option "🇵🇫 French Polynesia (+689)"
+                  - option "🇹🇫 French Southern Territories ()"
+                  - option "🇬🇦 Gabon (+241)"
+                  - option "🇬🇲 Gambia (+220)"
+                  - option "🇬🇪 Georgia (+995)"
+                  - option "🇬🇭 Ghana (+233)"
+                  - option "🇬🇮 Gibraltar (+350)"
+                  - option "🇬🇱 Greenland (+299)"
+                  - option "🇬🇩 Grenada (+1)"
+                  - option "🇬🇵 Guadeloupe (+590)"
+                  - option "🇬🇺 Guam (+1)"
+                  - option "🇬🇹 Guatemala (+502)"
+                  - option "🇬🇬 Guernsey (+44)"
+                  - option "🇬🇳 Guinea (+224)"
+                  - option "🇬🇼 Guinea-Bissau (+245)"
+                  - option "🇬🇾 Guyana (+592)"
+                  - option "🇭🇹 Haiti (+509)"
+                  - option "🇭🇲 Heard Island and McDonald Islands ()"
+                  - option "🇭🇳 Honduras (+504)"
+                  - option "🇭🇺 Hungary (+36)"
+                  - option "🇮🇸 Iceland (+354)"
+                  - option "🇮🇷 Iran (+98)"
+                  - option "🇮🇶 Iraq (+964)"
+                  - option "🇮🇲 Isle of Man (+44)"
+                  - option "🇯🇲 Jamaica (+1)"
+                  - option "🇯🇪 Jersey (+44)"
+                  - option "🇯🇴 Jordan (+962)"
+                  - option "🇰🇿 Kazakhstan (+7)"
+                  - option "🇰🇮 Kiribati (+686)"
+                  - option "🇽🇰 Kosovo, Republic of (+383)"
+                  - option "🇰🇼 Kuwait (+965)"
+                  - option "🇰🇬 Kyrgyzstan (+996)"
+                  - option "🇱🇦 Laos (+856)"
+                  - option "🇱🇻 Latvia (+371)"
+                  - option "🇱🇧 Lebanon (+961)"
+                  - option "🇱🇸 Lesotho (+266)"
+                  - option "🇱🇷 Liberia (+231)"
+                  - option "🇱🇾 Libya (+218)"
+                  - option "🇱🇮 Liechtenstein (+423)"
+                  - option "🇱🇹 Lithuania (+370)"
+                  - option "🇱🇺 Luxembourg (+352)"
+                  - option "🇲🇴 Macao (+853)"
+                  - option "🇲🇬 Madagascar (+261)"
+                  - option "🇲🇼 Malawi (+265)"
+                  - option "🇲🇻 Maldives (+960)"
+                  - option "🇲🇱 Mali (+223)"
+                  - option "🇲🇹 Malta (+356)"
+                  - option "🇲🇭 Marshall Islands (+692)"
+                  - option "🇲🇶 Martinique (+596)"
+                  - option "🇲🇷 Mauritania (+222)"
+                  - option "🇲🇺 Mauritius (+230)"
+                  - option "🇾🇹 Mayotte (+262)"
+                  - option "🇫🇲 Micronesia (+691)"
+                  - option "🇲🇩 Moldova (+373)"
+                  - option "🇲🇨 Monaco (+377)"
+                  - option "🇲🇳 Mongolia (+976)"
+                  - option "🇲🇪 Montenegro (+382)"
+                  - option "🇲🇸 Montserrat (+1)"
+                  - option "🇲🇦 Morocco (+212)"
+                  - option "🇲🇿 Mozambique (+258)"
+                  - option "🇲🇲 Myanmar (+95)"
+                  - option "🇳🇦 Namibia (+264)"
+                  - option "🇳🇷 Nauru (+674)"
+                  - option "🇳🇵 Nepal (+977)"
+                  - option "🇳🇨 New Caledonia (+687)"
+                  - option "🇳🇮 Nicaragua (+505)"
+                  - option "🇳🇪 Niger (+227)"
+                  - option "🇳🇺 Niue (+683)"
+                  - option "🇳🇫 Norfolk Island (+672)"
+                  - option "🇰🇵 North Korea (+850)"
+                  - option "🇲🇰 North Macedonia (+389)"
+                  - option "🇲🇵 Northern Mariana Islands (+1)"
+                  - option "🇴🇲 Oman (+968)"
+                  - option "🇵🇼 Palau (+680)"
+                  - option "🇵🇸 Palestine (+970)"
+                  - option "🇵🇦 Panama (+507)"
+                  - option "🇵🇬 Papua New Guinea (+675)"
+                  - option "🇵🇾 Paraguay (+595)"
+                  - option "🇵🇪 Peru (+51)"
+                  - option "🇵🇳 Pitcairn ()"
+                  - option "🇵🇷 Puerto Rico (+1)"
+                  - option "🇶🇦 Qatar (+974)"
+                  - option "🇷🇴 Romania (+40)"
+                  - option "🇷🇼 Rwanda (+250)"
+                  - option "🇷🇪 Réunion (+262)"
+                  - option "🇧🇱 Saint Barthélemy (+590)"
+                  - option "🇸🇭 Saint Helena (+290)"
+                  - option "🇰🇳 Saint Kitts and Nevis (+1)"
+                  - option "🇱🇨 Saint Lucia (+1)"
+                  - option "🇲🇫 Saint Martin (French part) (+590)"
+                  - option "🇵🇲 Saint Pierre and Miquelon (+508)"
+                  - option "🇻🇨 Saint Vincent and the Grenadines (+1)"
+                  - option "🇼🇸 Samoa (+685)"
+                  - option "🇸🇲 San Marino (+378)"
+                  - option "🇸🇹 Sao Tome and Principe (+239)"
+                  - option "🇸🇳 Senegal (+221)"
+                  - option "🇷🇸 Serbia (+381)"
+                  - option "🇸🇨 Seychelles (+248)"
+                  - option "🇸🇱 Sierra Leone (+232)"
+                  - option "🇸🇽 Sint Maarten (Dutch part) (+1)"
+                  - option "🇸🇰 Slovakia (+421)"
+                  - option "🇸🇮 Slovenia (+386)"
+                  - option "🇸🇧 Solomon Islands (+677)"
+                  - option "🇸🇴 Somalia (+252)"
+                  - option "🇬🇸 South Georgia ()"
+                  - option "🇸🇸 South Sudan (+211)"
+                  - option "🇱🇰 Sri Lanka (+94)"
+                  - option "🇸🇩 Sudan (+249)"
+                  - option "🇸🇷 Suriname (+597)"
+                  - option "🇸🇯 Svalbard and Jan Mayen (+47)"
+                  - option "🇸🇾 Syria (+963)"
+                  - option "🇹🇯 Tajikistan (+992)"
+                  - option "🇹🇿 Tanzania (+255)"
+                  - option "🇹🇱 Timor-Leste (+670)"
+                  - option "🇹🇬 Togo (+228)"
+                  - option "🇹🇰 Tokelau (+690)"
+                  - option "🇹🇴 Tonga (+676)"
+                  - option "🇹🇹 Trinidad and Tobago (+1)"
+                  - option "🇹🇳 Tunisia (+216)"
+                  - option "🇹🇲 Turkmenistan (+993)"
+                  - option "🇹🇨 Turks and Caicos Islands (+1)"
+                  - option "🇹🇻 Tuvalu (+688)"
+                  - option "🇺🇬 Uganda (+256)"
+                  - option "🇺🇲 United States Minor Outlying Islands ()"
+                  - option "🇺🇾 Uruguay (+598)"
+                  - option "🇺🇿 Uzbekistan (+998)"
+                  - option "🇻🇺 Vanuatu (+678)"
+                  - option "🇻🇦 Vatican City (+39)"
+                  - option "🇻🇪 Venezuela (+58)"
+                  - option "🇻🇬 Virgin Islands (British) (+1)"
+                  - option "🇻🇮 Virgin Islands (U.S.) (+1)"
+                  - option "🇼🇫 Wallis and Futuna (+681)"
+                  - option "🇪🇭 Western Sahara (+212)"
+                  - option "🇾🇪 Yemen (+967)"
+                  - option "🇿🇲 Zambia (+260)"
+                  - option "🇿🇼 Zimbabwe (+263)"
+                  - option "🇦🇽 Åland Islands (+358)"
+              - textbox "Phone number" [ref=e322]
+              - combobox "Label" [ref=e323] [cursor=pointer]:
+                - option "Mobile" [selected]
+                - option "Work"
+                - option "Home"
+                - option "Fax"
+                - option "Other"
+          - generic [ref=e324]:
+            - generic [ref=e326]:
+              - generic [ref=e327]: Position
+              - textbox "Position" [ref=e329]
+            - generic [ref=e331]:
+              - generic [ref=e332]: Department
+              - textbox "Department" [ref=e334]
+            - generic [ref=e336]:
+              - generic [ref=e337]: Supervisor
+              - button "Search" [ref=e339] [cursor=pointer]
+            - generic [ref=e345]:
+              - generic [ref=e346]: Assistant
+              - button "Search" [ref=e348] [cursor=pointer]
+            - generic [ref=e354]:
+              - generic [ref=e355]: Referred By
+              - button "Search" [ref=e357] [cursor=pointer]
+            - generic [ref=e363]:
+              - generic [ref=e364]: Source
+              - combobox "Source" [ref=e366] [cursor=pointer]:
+                - option "Select Source" [selected]
+                - option "Website"
+                - option "Google"
+                - option "Referral"
+                - option "Facebook"
+                - option "Repeat Customer"
+            - generic [ref=e368]:
+              - generic [ref=e369]: Do not Call
+              - checkbox [ref=e371]
+            - generic [ref=e373]:
+              - generic [ref=e374]: Do not Text
+              - checkbox [ref=e376]
+            - generic [ref=e378]:
+              - generic [ref=e379]: Do not Email
+              - checkbox [ref=e381]
+            - generic [ref=e383]:
+              - generic [ref=e384]: Birthday
+              - generic [ref=e385]:
+                - spinbutton "Day" [ref=e386]
+                - combobox [ref=e387]:
+                  - option "Month" [selected]
+                  - option "January"
+                  - option "February"
+                  - option "March"
+                  - option "April"
+                  - option "May"
+                  - option "June"
+                  - option "July"
+                  - option "August"
+                  - option "September"
+                  - option "October"
+                  - option "November"
+                  - option "December"
+                - spinbutton "Year" [ref=e388]
+            - generic [ref=e390]:
+              - generic [ref=e391]: Identifier
+              - textbox "Identifier" [ref=e393]
+            - generic [ref=e395]:
+              - generic [ref=e396]: Image
+              - textbox "Image" [ref=e398]
+  - generic [ref=e401]:
+    - generic [ref=e402]:
+      - img "notification icon" [ref=e404]
+      - generic [ref=e405]: Subscribe to our notifications for the latest news and updates. You can disable anytime.
+    - generic [ref=e407]:
+      - button "Subscribe" [ref=e408] [cursor=pointer]
+      - button "Later" [ref=e409] [cursor=pointer]
+```

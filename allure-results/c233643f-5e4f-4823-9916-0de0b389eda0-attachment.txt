@@ -1,0 +1,14 @@
+2026-09-26 12:35:59 [info]: Clicking on contact links
+2026-09-26 12:35:59 [info]: Clicking on locator('//span[text()=\'Contacts\']')
+2026-09-26 12:36:00 [info]: Clicking on Create Button
+2026-09-26 12:36:00 [info]: Clicking on getByRole('button', { name: 'Create' })
+2026-09-26 12:36:02 [info]: Entering Helen value in first Name text box
+2026-09-26 12:36:02 [info]: Entering Helen text in locator('#first-name')
+2026-09-26 12:36:03 [info]: Entering Labadie value in Last Name Text box
+2026-09-26 12:36:03 [info]: Entering Labadie text in locator('#last-name')
+2026-09-26 12:36:07 [info]: Selecting Contact dropdown value
+2026-09-26 12:36:07 [info]: Locating locator('#category') and Selecting the Contact dropdown values
+2026-09-26 12:36:08 [info]: Selecting New dropdown value 
+2026-09-26 12:36:08 [info]: Locating locator('#status') and Selecting the New dropdown values
+2026-09-26 12:36:09 [info]: Clicking on Save button
+2026-09-26 12:36:09 [info]: Clicking on getByRole('button', { name: 'Save' })

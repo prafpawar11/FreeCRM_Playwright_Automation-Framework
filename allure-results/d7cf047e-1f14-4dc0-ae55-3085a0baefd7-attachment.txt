@@ -1,0 +1,2 @@
+2026-09-19 12:59:12 [info]: Clicking on contact links
+2026-09-19 12:59:12 [info]: Clicking on locator('//span[text()=\'Contacts\']')

@@ -1,0 +1,2 @@
+2026-09-26 12:52:22 [info]: Clicking on locator('//ul[@class=\'_navList_3as89_80\']/descendant::a[@href=\'/deals\']')
+2026-09-26 12:52:24 [info]: Clicking on locator('//button[text()=\'Create\']')

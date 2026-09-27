@@ -1,0 +1,14 @@
+2026-09-19 11:39:30 [info]: Clicking on contact links
+2026-09-19 11:39:30 [info]: Clicking on locator('//span[text()=\'Contacts\']')
+2026-09-19 11:39:32 [info]: Clicking on Create Button
+2026-09-19 11:39:32 [info]: Clicking on getByRole('button', { name: 'Create' })
+2026-09-19 11:39:33 [info]: Entering Ajit value in first Name text box
+2026-09-19 11:39:33 [info]: Entering Ajit text in locator('#first-name')
+2026-09-19 11:39:34 [info]: Entering Sonar value in Last Name Text box
+2026-09-19 11:39:34 [info]: Entering Sonar text in locator('#last-name')
+2026-09-19 11:39:35 [info]: Selecting Lead dropdown value
+2026-09-19 11:39:35 [info]: Locating locator('#category') and Selecting the Lead dropdown values
+2026-09-19 11:39:36 [info]: Selecting Inactive dropdown value 
+2026-09-19 11:39:36 [info]: Locating locator('#status') and Selecting the Inactive dropdown values
+2026-09-19 11:39:37 [info]: Clicking on Save button
+2026-09-19 11:39:37 [info]: Clicking on getByRole('button', { name: 'Save' })

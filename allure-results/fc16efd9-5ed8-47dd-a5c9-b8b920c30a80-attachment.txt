@@ -1,0 +1,3 @@
+2026-09-26 12:33:05 [info]: Clicking on locator('//ul[@class=\'_navList_3as89_80\']/descendant::a[@href=\'/deals\']')
+2026-09-26 12:33:07 [info]: Clicking on locator('//button[text()=\'Create\']')
+2026-09-26 12:33:08 [info]: Entering undefined text in Mobile Deals

@@ -1,0 +1,3 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","11304","Create new Contact Test Cases","","2026-09-13","passed","2026-09-13","","ContactPageTest.spec.js","",""
+"","4569","Verify Used is on Contact Page","","2026-09-13","passed","2026-09-13","","ContactPageTest.spec.js","",""

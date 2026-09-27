@@ -1,0 +1,8 @@
+2026-09-26 12:56:13 [info]: Clicking on contact links
+2026-09-26 12:56:13 [info]: Clicking on locator('//span[text()=\'Contacts\']')
+2026-09-26 12:56:14 [info]: Clicking on Create Button
+2026-09-26 12:56:14 [info]: Clicking on getByRole('button', { name: 'Create' })
+2026-09-26 12:56:16 [info]: Entering Dianne value in first Name text box
+2026-09-26 12:56:16 [info]: Entering Dianne text in locator('#first-name')
+2026-09-26 12:56:17 [info]: Entering McDermott-Langworth value in Last Name Text box
+2026-09-26 12:56:17 [info]: Entering McDermott-Langworth text in locator('#last-name')

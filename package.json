@@ -1,0 +1,31 @@
+{
+  "name": "playwright-framework-workspace-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:qa": "npx cross-env TEST_ENV='qa' npx playwright test",
+    "test:uat": "npx cross-env TEST_ENV='uat' npx playwright test",
+    "test:staging": "npx cross-env TEST_ENV='staging' npx playwright test",
+    "test:qa:chromium": "npx cross-env TEST_ENV='qa' npx playwright test --project='chromium'",
+    "test:qa:firefox": "npx cross-env TEST_ENV='qa' npx playwright test --project='firefox'",
+    "test:qa:webkit": "npx cross-env TEST_ENV='qa' npx playwright test --project='webkit'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^22.20.2"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^10.6.0",
+    "allure-commandline": "^2.43.0",
+    "allure-playwright": "^3.12.1",
+    "cross-env": "^10.1.0",
+    "dotenv": "^18.0.1",
+    "winston": "^3.19.0",
+    "xlsx": "^0.18.5"
+  }
+}
