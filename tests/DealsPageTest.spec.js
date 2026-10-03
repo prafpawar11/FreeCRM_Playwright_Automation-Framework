@@ -17,4 +17,6 @@ test("Create new Deals", async ({page, dealsPage}) =>{
 
     console.log("New code is added");
 
+        console.log("New code is added");
+
 });
