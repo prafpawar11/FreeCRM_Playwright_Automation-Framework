@@ -15,5 +15,6 @@ test("Create new Deals", async ({page, dealsPage}) =>{
 
     await dealsPage.clickOnSaveButton();
 
+    console.log("New code is added");
 
 });
