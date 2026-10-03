@@ -1363,3 +1363,130 @@
 2026-09-26 13:00:39 [info]: Locating locator('#status') and Selecting the New dropdown values
 2026-09-26 13:00:40 [info]: Clicking on Save button
 2026-09-26 13:00:40 [info]: Clicking on getByRole('button', { name: 'Save' })
+2026-09-27 11:44:52 [info]: Entering prafulp1010@gmail.com value in Username text box
+2026-09-27 11:44:52 [info]: Entering prafulp1010@gmail.com text in locator('#email')
+2026-09-27 11:44:52 [info]: Entering Pr@ful0812 value in Password Text box
+2026-09-27 11:44:52 [info]: Entering Pr@ful0812 text in locator('#password')
+2026-09-27 11:44:52 [info]: Clicking on Login button
+2026-09-27 11:44:52 [info]: Clicking on getByRole('button', { name: 'Login' })
+2026-09-27 11:45:02 [info]: Clicking on contact links
+2026-09-27 11:45:02 [info]: Clicking on locator('//span[text()=\'Contacts\']')
+2026-09-27 11:45:02 [info]: Clicking on contact links
+2026-09-27 11:45:02 [info]: Clicking on locator('//span[text()=\'Contacts\']')
+2026-09-27 11:45:02 [info]: Clicking on locator('//ul[@class=\'_navList_3as89_80\']/descendant::a[@href=\'/deals\']')
+2026-09-27 11:45:03 [info]: Clicking on Create Button
+2026-09-27 11:45:03 [info]: Clicking on getByRole('button', { name: 'Create' })
+2026-09-27 11:45:04 [info]: Clicking on locator('//button[text()=\'Create\']')
+2026-09-27 11:45:06 [info]: Entering Mobile Deals text in locator('#title')
+2026-09-27 11:45:06 [info]: Entering Nigel value in first Name text box
+2026-09-27 11:45:06 [info]: Entering Nigel text in locator('#first-name')
+2026-09-27 11:45:07 [info]: Clicking on getByRole('button', { name: 'Save' })
+2026-09-27 11:45:07 [info]: Entering Grady value in Last Name Text box
+2026-09-27 11:45:07 [info]: Entering Grady text in locator('#last-name')
+2026-09-27 11:45:11 [info]: Selecting Contact dropdown value
+2026-09-27 11:45:11 [info]: Locating locator('#category') and Selecting the Contact dropdown values
+2026-09-27 11:45:12 [info]: Selecting New dropdown value 
+2026-09-27 11:45:12 [info]: Locating locator('#status') and Selecting the New dropdown values
+2026-09-27 11:45:13 [info]: Clicking on Save button
+2026-09-27 11:45:13 [info]: Clicking on getByRole('button', { name: 'Save' })
+2026-09-27 12:01:19 [info]: Entering prafulp1010@gmail.com value in Username text box
+2026-09-27 12:01:19 [info]: Entering prafulp1010@gmail.com text in locator('#email')
+2026-09-27 12:01:19 [info]: Entering Pr@ful0812 value in Password Text box
+2026-09-27 12:01:19 [info]: Entering Pr@ful0812 text in locator('#password')
+2026-09-27 12:01:19 [info]: Clicking on Login button
+2026-09-27 12:01:19 [info]: Clicking on getByRole('button', { name: 'Login' })
+2026-09-27 12:01:25 [info]: Clicking on locator('//nav[@class=\'_nav_3as89_1\']/descendant::a[@href=\'/tasks\']')
+2026-09-27 12:02:02 [info]: Entering prafulp1010@gmail.com value in Username text box
+2026-09-27 12:02:02 [info]: Entering prafulp1010@gmail.com text in locator('#email')
+2026-09-27 12:02:03 [info]: Entering Pr@ful0812 value in Password Text box
+2026-09-27 12:02:03 [info]: Entering Pr@ful0812 text in locator('#password')
+2026-09-27 12:02:03 [info]: Clicking on Login button
+2026-09-27 12:02:03 [info]: Clicking on getByRole('button', { name: 'Login' })
+2026-09-27 12:02:10 [info]: Clicking on locator('//nav[@class=\'_nav_3as89_1\']/descendant::a[@href=\'/tasks\']')
+2026-09-27 12:02:12 [info]: Clicking on getByRole('button', { name: 'Create' })
+2026-09-27 12:02:13 [info]: Entering undefined text in locator('#title')
+2026-09-27 12:02:18 [info]: Clicking on locator('//nav[@class=\'_nav_3as89_1\']/descendant::a[@href=\'/tasks\']')
+2026-09-27 12:02:20 [info]: Clicking on getByRole('button', { name: 'Create' })
+2026-09-27 12:02:21 [info]: Entering undefined text in locator('#title')
+2026-09-27 12:02:27 [info]: Clicking on locator('//nav[@class=\'_nav_3as89_1\']/descendant::a[@href=\'/tasks\']')
+2026-09-27 12:02:28 [info]: Clicking on getByRole('button', { name: 'Create' })
+2026-09-27 12:02:29 [info]: Entering undefined text in locator('#title')
+2026-09-27 12:02:34 [info]: Clicking on locator('//nav[@class=\'_nav_3as89_1\']/descendant::a[@href=\'/tasks\']')
+2026-09-27 12:02:36 [info]: Clicking on getByRole('button', { name: 'Create' })
+2026-09-27 12:02:37 [info]: Entering undefined text in locator('#title')
+2026-09-27 12:04:12 [info]: Entering prafulp1010@gmail.com value in Username text box
+2026-09-27 12:04:12 [info]: Entering prafulp1010@gmail.com text in locator('#email')
+2026-09-27 12:04:12 [info]: Entering Pr@ful0812 value in Password Text box
+2026-09-27 12:04:12 [info]: Entering Pr@ful0812 text in locator('#password')
+2026-09-27 12:04:12 [info]: Clicking on Login button
+2026-09-27 12:04:12 [info]: Clicking on getByRole('button', { name: 'Login' })
+2026-09-27 12:04:20 [info]: Clicking on locator('//nav[@class=\'_nav_3as89_1\']/descendant::a[@href=\'/tasks\']')
+2026-09-27 12:04:22 [info]: Clicking on getByRole('button', { name: 'Create' })
+2026-09-27 12:04:23 [info]: Entering Automation Code text in locator('#title')
+2026-09-27 12:04:24 [info]: Entering Automation code using playwright text in locator('._textarea_1hcox_39')
+2026-09-27 12:04:25 [info]: Entering 80% text in locator('#completion')
+2026-09-27 12:04:31 [info]: Clicking on locator('//nav[@class=\'_nav_3as89_1\']/descendant::a[@href=\'/tasks\']')
+2026-09-27 12:04:33 [info]: Clicking on getByRole('button', { name: 'Create' })
+2026-09-27 12:04:34 [info]: Entering Automation Code text in locator('#title')
+2026-09-27 12:04:35 [info]: Entering Automation code using playwright text in locator('._textarea_1hcox_39')
+2026-09-27 12:04:36 [info]: Entering 80% text in locator('#completion')
+2026-09-27 12:04:43 [info]: Clicking on locator('//nav[@class=\'_nav_3as89_1\']/descendant::a[@href=\'/tasks\']')
+2026-09-27 12:04:44 [info]: Clicking on getByRole('button', { name: 'Create' })
+2026-09-27 12:04:45 [info]: Entering Automation Code text in locator('#title')
+2026-09-27 12:04:46 [info]: Entering Automation code using playwright text in locator('._textarea_1hcox_39')
+2026-09-27 12:04:47 [info]: Entering 80% text in locator('#completion')
+2026-09-27 12:04:54 [info]: Clicking on locator('//nav[@class=\'_nav_3as89_1\']/descendant::a[@href=\'/tasks\']')
+2026-09-27 12:04:56 [info]: Clicking on getByRole('button', { name: 'Create' })
+2026-09-27 12:04:57 [info]: Entering Automation Code text in locator('#title')
+2026-09-27 12:04:58 [info]: Entering Automation code using playwright text in locator('._textarea_1hcox_39')
+2026-09-27 12:04:59 [info]: Entering 80% text in locator('#completion')
+2026-09-27 12:05:35 [info]: Entering prafulp1010@gmail.com value in Username text box
+2026-09-27 12:05:35 [info]: Entering prafulp1010@gmail.com text in locator('#email')
+2026-09-27 12:05:35 [info]: Entering Pr@ful0812 value in Password Text box
+2026-09-27 12:05:35 [info]: Entering Pr@ful0812 text in locator('#password')
+2026-09-27 12:05:35 [info]: Clicking on Login button
+2026-09-27 12:05:35 [info]: Clicking on getByRole('button', { name: 'Login' })
+2026-09-27 12:05:44 [info]: Clicking on locator('//nav[@class=\'_nav_3as89_1\']/descendant::a[@href=\'/tasks\']')
+2026-09-27 12:05:45 [info]: Clicking on getByRole('button', { name: 'Create' })
+2026-09-27 12:05:46 [info]: Entering Automation Code text in locator('#title')
+2026-09-27 12:05:47 [info]: Entering Automation code using playwright text in locator('._textarea_1hcox_39')
+2026-09-27 12:05:48 [info]: Entering 80 text in locator('#completion')
+2026-09-27 12:05:49 [info]: Clicking on getByRole('button', { name: 'Save' })
+2026-09-27 12:29:05 [info]: Entering prafulp1010@gmail.com value in Username text box
+2026-09-27 12:29:05 [info]: Entering prafulp1010@gmail.com text in locator('#email')
+2026-09-27 12:29:05 [info]: Entering Pr@ful0812 value in Password Text box
+2026-09-27 12:29:05 [info]: Entering Pr@ful0812 text in locator('#password')
+2026-09-27 12:29:05 [info]: Clicking on Login button
+2026-09-27 12:29:05 [info]: Clicking on getByRole('button', { name: 'Login' })
+2026-09-27 12:29:13 [info]: Clicking on locator('//nav[@class=\'_nav_3as89_1\']/descendant::a[@href=\'/tasks\']')
+2026-09-27 12:29:14 [info]: Clicking on locator('//nav[@class=\'_nav_3as89_1\']/descendant::a[@href=\'/tasks\']')
+2026-09-27 12:29:15 [info]: Clicking on getByRole('button', { name: 'Create' })
+2026-09-27 12:29:16 [info]: Clicking on getByRole('button', { name: 'Create' })
+2026-09-27 12:29:16 [info]: Entering Automation Code text in locator('#title')
+2026-09-27 12:29:17 [info]: Entering Automation Code text in locator('#title')
+2026-09-27 12:29:17 [info]: Entering Automation code using playwright text in locator('._textarea_1hcox_39')
+2026-09-27 12:29:18 [info]: Entering Automation code using playwright text in locator('._textarea_1hcox_39')
+2026-09-27 12:29:18 [info]: Entering 80 text in locator('#completion')
+2026-09-27 12:29:19 [info]: Entering 80 text in locator('#completion')
+2026-09-27 12:29:19 [info]: Clicking on getByRole('button', { name: 'Save' })
+2026-09-27 12:29:20 [info]: Clicking on getByRole('button', { name: 'Save' })
+2026-09-27 12:29:21 [info]: Clicking on locator('//button[@aria-label=\'Delete\']')
+2026-09-27 12:29:43 [info]: Entering prafulp1010@gmail.com value in Username text box
+2026-09-27 12:29:43 [info]: Entering prafulp1010@gmail.com text in locator('#email')
+2026-09-27 12:29:43 [info]: Entering Pr@ful0812 value in Password Text box
+2026-09-27 12:29:43 [info]: Entering Pr@ful0812 text in locator('#password')
+2026-09-27 12:29:43 [info]: Clicking on Login button
+2026-09-27 12:29:43 [info]: Clicking on getByRole('button', { name: 'Login' })
+2026-09-27 12:29:51 [info]: Clicking on locator('//nav[@class=\'_nav_3as89_1\']/descendant::a[@href=\'/tasks\']')
+2026-09-27 12:29:51 [info]: Clicking on locator('//nav[@class=\'_nav_3as89_1\']/descendant::a[@href=\'/tasks\']')
+2026-09-27 12:29:52 [info]: Clicking on getByRole('button', { name: 'Create' })
+2026-09-27 12:29:52 [info]: Clicking on getByRole('button', { name: 'Create' })
+2026-09-27 12:29:53 [info]: Entering Automation Code text in locator('#title')
+2026-09-27 12:29:53 [info]: Entering Automation Code text in locator('#title')
+2026-09-27 12:29:54 [info]: Entering Automation code using playwright text in locator('._textarea_1hcox_39')
+2026-09-27 12:29:54 [info]: Entering Automation code using playwright text in locator('._textarea_1hcox_39')
+2026-09-27 12:29:55 [info]: Entering 80 text in locator('#completion')
+2026-09-27 12:29:55 [info]: Entering 80 text in locator('#completion')
+2026-09-27 12:29:56 [info]: Clicking on getByRole('button', { name: 'Save' })
+2026-09-27 12:29:57 [info]: Clicking on getByRole('button', { name: 'Save' })
+2026-09-27 12:29:58 [info]: Clicking on locator('//button[@aria-label=\'Delete\']')
